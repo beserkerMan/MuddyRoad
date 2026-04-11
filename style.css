@@ -326,6 +326,8 @@ main {
   justify-content: center;
   align-self: stretch;
   gap: 4px;
+
+  justify-self: end; /* ✅ ADD THIS */
 }
 
 .listing-price {
