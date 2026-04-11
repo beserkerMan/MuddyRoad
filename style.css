@@ -15,15 +15,15 @@
 
 body {
   min-height: 100vh;
-  background: var(--white);
-  color: var(--black);
+  background: #f5f2e8;
+  color: #111111;;
   font-family: "Space Mono", monospace;
   font-size: 14px;
 }
 
 header {
-  background: var(--yellow);
-  border-bottom: var(--border);
+  background: #ffe033;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .header {
@@ -35,7 +35,7 @@ header {
 }
 
 .logo {
-  color: var(--black);
+  color: black;
   text-decoration: none;
   font-family: "Bebas Neue", sans-serif;
   font-size: 2rem;
@@ -44,7 +44,7 @@ header {
 }
 
 .logo span {
-  color: var(--red);
+  color: #d93b2b;
 }
 
 main {
@@ -56,27 +56,30 @@ main {
 .listings-list {
   display: flex;
   flex-direction: column;
-  border-top: var(--border);
   margin-bottom: 3rem;
+}
+
+.action-row { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 8px;  
+  margin-bottom: 1.5rem; 
 }
 
 .listing-row {
   display: grid;
-  grid-template-columns: 200px minmax(0, 1fr) 120px;
-  gap: 0;
-  background: var(--white);
-  color: var(--black);
+  grid-template-columns: 200px minmax(0, 1fr) 150px;
+  gap: 100px;
+  color: #111111;
   text-decoration: none;
-  border-bottom: var(--border);
   transition: background 0.15s ease;
 }
 
 .listing-row:hover {
-  background: #fff8cf;
+  background: #fff37547;
 }
 
-.listing-img,
-.listing-img2 {
+.listing-img, .listing-img2 {
   width: 100%;
   height: 100%;
   display: flex;
@@ -85,8 +88,7 @@ main {
   overflow: hidden;
 }
 
-.listing-img img,
-.listing-img2 img {
+.listing-img img, .listing-img2 img {
   display: block;
   width: 100%;
   height: 100%;
@@ -102,7 +104,6 @@ main {
 }
 
 .listing-title {
-  font-family: "Bebas Neue", sans-serif;
   font-size: 1.3rem;
   line-height: 1.1;
   letter-spacing: 0.5px;
@@ -112,9 +113,7 @@ main {
 .listing-desc {
   margin-top: 0.4rem;
   font-size: 12px;
-  line-height: 1.5;
-  color: #444;
-  font-style: italic;
+  color: #2a2a2a;
   text-align: center;
 }
 
@@ -127,7 +126,6 @@ main {
 }
 
 .listing-price {
-  font-family: "Bebas Neue", sans-serif;
   font-size: 1.8rem;
   line-height: 1;
   letter-spacing: 1px;
@@ -137,8 +135,8 @@ main {
   margin-top: 6px;
   display: inline-block;
   padding: 6px 10px;
-  background: var(--black);
-  color: var(--yellow);
+  background: black;
+  color: yellow;
   font-family: "Bebas Neue", sans-serif;
   font-size: 11px;
   letter-spacing: 1px;
@@ -152,7 +150,7 @@ main {
   gap: 6px;
   margin-bottom: 1.5rem;
   padding: 6px 0;
-  color: var(--black);
+  color: black;
   text-decoration: none;
   font-size: 12px;
   font-weight: 700;
@@ -174,7 +172,7 @@ main {
   aspect-ratio: 1 / 1;
   overflow: hidden;
   background: #e8e4d8;
-  border: 2px solid var(--black);
+  border: 2px solid black;
 }
 
 .gallery-viewer img {
@@ -190,8 +188,7 @@ main {
 }
 
 .detail-title {
-  margin-bottom: 0.25rem;
-  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 0.25rem; 
   font-size: 2.5rem;
   line-height: 1;
   letter-spacing: 1px;
@@ -204,25 +201,17 @@ main {
   margin-bottom: 1.25rem;
 }
 
-.detail-price {
-  font-family: "Bebas Neue", sans-serif;
+.detail-price { 
   font-size: 3rem;
   line-height: 1;
   letter-spacing: 2px;
 }
-
-.action-row {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 8px;
-  margin-bottom: 1.5rem;
-}
-
+  
 .btn-buy {
   padding: 14px;
   border: 0;
-  background: var(--black);
-  color: var(--yellow);
+  background: black;
+  color: yellow;
   font-family: "Bebas Neue", sans-serif;
   font-size: 13px;
   font-weight: 700;
@@ -232,7 +221,7 @@ main {
 }
 
 .btn-buy:hover {
-  background: var(--red);
+  background: red;
 }
 
 .desc-box {
@@ -240,16 +229,15 @@ main {
 }
 
 .desc-text {
-  font-size: 13px;
-  line-height: 1.8;
+  font-size: 13px; 
   color: #333;
 }
 
 footer {
   margin-top: 4rem;
   padding: 1.5rem 2rem;
-  background: var(--black);
-  color: var(--white);
+  background: black;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -258,10 +246,9 @@ footer {
 }
 
 .footer-logo {
-  font-family: "Bebas Neue", sans-serif;
   font-size: 1.5rem;
   letter-spacing: 2px;
-  color: var(--yellow);
+  color: yellow;
 }
 
 .footer-text {
