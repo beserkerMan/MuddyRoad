@@ -78,43 +78,9 @@
       └──────────────────────────────────────────────────┘
       -->
       <div class="gallery">
-
-        <!-- Radio inputs — one per photo. The first is checked by default. -->
-        <input type="radio" name="gallery" id="img1" checked>  <!-- photo 1 -->
-        <input type="radio" name="gallery" id="img2">          <!-- photo 2 -->
-        <input type="radio" name="gallery" id="img3">          <!-- photo 3 -->
-        <input type="radio" name="gallery" id="img4">          <!-- photo 4 -->
-
-        <!-- Main display panels — one per photo, stacked on top of each other.
-             CSS shows only the one whose radio is checked.                    -->
-        <div class="gallery-panels">
-
-          <div class="gallery-panel">                                          <!-- panel 1 -->
-            <img src="images/muscab.webp" alt="Laptop front view">           <!-- [EDIT: photo 1] -->
-          </div>
-
-          <div class="gallery-panel">                                          <!-- panel 2 -->
-            <img src="images/Portrait_Caricature_Of_King_Leopold_II_of_the_Belgians_from_Charles_Lucien_L-andre.jpg" alt="Laptop keyboard close-up">   <!-- [EDIT: photo 2] -->
-          </div>
-<!-- [EDIT: photo 4] -->
-          
-
-        </div><!-- end .gallery-panels -->
-
-        <!-- Thumbnail strip — each is a <label> that activates its radio.
-             Use the same image paths as the panels above.                    -->
-        <div class="gallery-thumbs">
-
-          <label class="gallery-thumb" for="img1">                            <!-- thumbnail 1 -->
-            <img src="images/muscab.webp" alt="View 1">                      <!-- [EDIT: same as panel 1] -->
-          </label>
-
-          <label class="gallery-thumb" for="img2">                            <!-- thumbnail 2 -->
-            <img src="images/Portrait_Caricature_Of_King_Leopold_II_of_the_Belgians_from_Charles_Lucien_L-andre.jpg" alt="View 2">                      <!-- [EDIT: same as panel 2] -->
-          </label>
-
-        </div><!-- end .gallery-thumbs -->
-
+        <div class="gallery-viewer">
+          <img id="img1" src="images/muscab.webp" alt="Item photo">  <!-- [EDIT] -->
+        </div>
       </div><!-- end .gallery -->
 
 
