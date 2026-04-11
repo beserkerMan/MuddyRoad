@@ -278,11 +278,10 @@ main {
 
 /* ── Text column ── */
 .listing-body {
-  padding: 1rem 1.25rem;
+  padding: 0.5rem 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 5px;
   min-width: 0;    /* stops long words overflowing the grid cell */
 }
 
@@ -291,18 +290,16 @@ main {
   font-size: 1.3rem;
   letter-spacing: 0.5px;
   line-height: 1.1;
-}
 
-.listing-meta {
-  font-size: 11px;
-  color: #888;
+  text-align: center;
 }
-
+ 
 .listing-desc {
   font-size: 12px;
   color: #444;
   font-style: italic;
   line-height: 1.5;
+  text-align: center;
 }
 
 /* ── Price column ──
@@ -310,16 +307,10 @@ main {
    fills the full row height (border visible top-to-bottom) while content
    sits in the middle — regardless of how tall the text column makes the row. */
 .listing-price-col {
-  border-left: var(--border);
-  padding: 1rem;
-  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  align-self: stretch;
-  gap: 4px;
+  text-align: center;
+  padding: 1rem;
 
-  justify-self: end; /* ✅ ADD THIS */
 }
 
 .listing-price {
