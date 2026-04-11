@@ -308,6 +308,8 @@ footer {
   }
 }
 
+
+
 @media (min-width: 740px) {
   .item-layout {
     grid-template-columns: 1fr 1fr;
