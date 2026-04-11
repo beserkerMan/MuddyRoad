@@ -95,7 +95,7 @@ header {
 }
 
 .btn {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 12px;
   font-weight: 700;
   border: var(--border);
@@ -110,10 +110,8 @@ header {
 }
 
 .btn:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 3px 3px 0 var(--black);
-  background: var(--yellow);
-  color: var(--black);
+  background: var(--red);
+  
 }
 
 .btn-ghost {
@@ -340,7 +338,7 @@ main {
 .listing-btn {
   display: inline-block;
   margin-top: 6px;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
@@ -356,8 +354,7 @@ main {
 }
 
 .listing-btn:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 3px 3px 0 var(--red);
+  background-color: #D93B2B;
 }
 
 @media (max-width: 580px) {
@@ -543,10 +540,11 @@ main {
 }
 
 .btn-buy {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 13px;
   font-weight: 700;
   padding: 14px;
+  cursor: pointer;
   background: var(--black);
   color: var(--yellow);
   text-transform: uppercase;
@@ -554,8 +552,8 @@ main {
 }
 
 .btn-buy:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 4px 4px 0 var(--red);
+  background-color: #D93B2B;
+  
 }
 
 /* =============================================================================
