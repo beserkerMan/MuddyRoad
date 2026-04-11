@@ -1,51 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DodgyDeals — Someone Else's Problem, Now Yours</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DodgyDeals — Someone Else's Problem, Now Yours</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ══ HEADER ══ -->
+    <header>
+      <div style="display: flex; align-items: baseline; gap: 0.75rem">
+        <a class="logo" href="index.html">Dodgy<span>Deals</span></a>
+        <div class="tagline">someone else's problem, now yours™</div>
+      </div>
+      <div class="header-right">
+        <button class="btn btn-ghost">Sign In</button>
+        <button class="btn">Sell Junk</button>
+      </div>
+    </header>
 
-<!-- ══ HEADER ══ -->
-<header>
-  <div style="display:flex; align-items:baseline; gap:0.75rem;">
-    <a class="logo" href="index.html">Dodgy<span>Deals</span></a>
-    <div class="tagline">someone else's problem, now yours™</div>
-  </div>
-  <div class="header-right">
-    <button class="btn btn-ghost">Sign In</button>
-    <button class="btn">Sell Junk</button>
-  </div>
-</header>
+    <!-- ══ MAIN CONTENT ══ -->
+    <main>
+      <!-- ── SECTION: Featured Listings ── -->
+      <div class="section-header" style="margin-top: 1.5rem">
+        <div class="section-title">Featured Listings</div>
+      </div>
 
-<!-- ══ CATEGORY BAR ══ -->
-<div class="cat-bar">
-  <div class="cat-item active">All Junk</div>
-  <div class="cat-item">Electronics</div>
-  <div class="cat-item">Furniture</div>
-  <div class="cat-item">Clothing</div>
-  <div class="cat-item">Vehicles</div>
-  <div class="cat-item">Collectibles</div>
-  <div class="cat-item">Pets (Maybe)</div>
-  <div class="cat-item">Cursed Items</div>
-  <div class="cat-item">Free (Catch)</div>
-</div>
-
-<!-- ══ MAIN CONTENT ══ -->
-<main>
-
-  <!-- ── SECTION: Featured Listings ── -->
-  <div class="section-header" style="margin-top:1.5rem;">
-    <div class="section-title">Featured Listings</div>
-  </div>
-
-  <div class="listings-list">
-
-    <!--
+      <div class="listings-list">
+        <!--
     ╔══════════════════════════════════════════════════════════════════╗
     ║  START LISTING  —  copy this block to add a new item             ║
     ╚══════════════════════════════════════════════════════════════════╝
@@ -61,239 +48,248 @@
         For a letterbox fit instead, change cover → contain in style.css section 7.
     -->
 
-    <!-- ─── LISTING 1 ─── -->
-    <a class="listing-row" href="item.html">
+        <!-- ─── LISTING 1 ─── -->
+        <a class="listing-row" href="item.html">
+          <figure class="listing-img">
+            <img src="images/laptop.jpg" alt="Dell Laptop" />
+            <!-- [EDIT: your image] -->
+          </figure>
 
-      <figure class="listing-img">
-        <img src="images/laptop.jpg" alt="Dell Laptop">   <!-- [EDIT: your image] -->
-      </figure>
+          <div class="listing-body">
+            <p class="listing-title">Dell Laptop (Probably Fine)</p>
+            <!-- [EDIT: item name] -->
+            <p class="listing-meta">Used · Nottingham · Seller: GarethM99</p>
+            <!-- [EDIT: condition · location · seller] -->
+            <p class="listing-desc">
+              Only drops internet sometimes. Fan makes a noise but it's a
+              comforting noise. The G key is sticky. Ribena incident. Won't
+              elaborate.
+            </p>
+            <!-- [EDIT: short teaser] -->
+          </div>
 
-      <div class="listing-body">
-        <p class="listing-title">Dell Laptop (Probably Fine)</p>             <!-- [EDIT: item name] -->
-        <p class="listing-meta">Used · Nottingham · Seller: GarethM99</p>   <!-- [EDIT: condition · location · seller] -->
-        <p class="listing-desc">
-          Only drops internet sometimes. Fan makes a noise but it's a
-          comforting noise. The G key is sticky. Ribena incident. Won't elaborate.
-        </p>                                                                  <!-- [EDIT: short teaser] -->
+          <div class="listing-price-col">
+            <p class="listing-price">£45</p>
+            <!-- [EDIT: price] -->
+            <p class="listing-price-note">or nearest offer<br />cash only</p>
+            <!-- [EDIT: note — delete <p> if not needed] -->
+            <a class="listing-btn" href="item.html">View Item →</a>
+            <!-- [EDIT: same href as the row] -->
+          </div>
+        </a>
+        <!-- ─── END LISTING 1 ─── -->
+
+        <!-- ─── LISTING 2 ─── -->
+        <a class="listing-row" href="item.html">
+          <figure class="listing-img">
+            <img src="images/sofa.jpg" alt="3-Seater Sofa" />
+          </figure>
+          <div class="listing-body">
+            <p class="listing-title">3-Seater Sofa (Cat Not Included)</p>
+            <p class="listing-meta">Used · Edinburgh · Seller: Sandra_Fife</p>
+            <p class="listing-desc">
+              Very comfortable. The stain is character, not a warning.
+              Collection only — you bring the van, I'll provide moral support
+              and tea.
+            </p>
+          </div>
+          <div class="listing-price-col">
+            <p class="listing-price">FREE</p>
+            <p class="listing-price-note">you collect<br />bring help</p>
+            <a class="listing-btn" href="item.html">View Item →</a>
+          </div>
+        </a>
+
+        <!-- ─── LISTING 3 ─── -->
+        <a class="listing-row" href="item.html">
+          <figure class="listing-img">
+            <img src="images/motorbike.jpg" alt="Honda CBR 600" />
+          </figure>
+          <div class="listing-body">
+            <p class="listing-title">Honda CBR 600 "Track Day Spec"</p>
+            <p class="listing-meta">Used · Bristol · Seller: DaveB_Moto</p>
+            <p class="listing-desc">
+              Fully road legal pending one small MOT. The bodywork is cosmetic
+              anyway. Selling before my wife finds the receipt. Priced to move.
+            </p>
+          </div>
+          <div class="listing-price-col">
+            <p class="listing-price">£1,200</p>
+            <p class="listing-price-note">open to offers<br />serious only</p>
+            <a class="listing-btn" href="item.html">View Item →</a>
+          </div>
+        </a>
+
+        <!-- ─── LISTING 4 ─── -->
+        <a class="listing-row" href="item.html">
+          <figure class="listing-img">
+            <img src="images/tv.jpg" alt="42 inch Smart TV" />
+          </figure>
+          <div class="listing-body">
+            <p class="listing-title">42" Smart TV (Mostly Smart)</p>
+            <p class="listing-meta">Used · Leeds · Seller: TechDump2024</p>
+            <p class="listing-desc">
+              Netflix works. YouTube stutters on Tuesdays specifically. Remote
+              is gone but apparently any remote works if you believe hard
+              enough.
+            </p>
+          </div>
+          <div class="listing-price-col">
+            <p class="listing-price">£80</p>
+            <p class="listing-price-note">or nearest offer</p>
+            <a class="listing-btn" href="item.html">View Item →</a>
+          </div>
+        </a>
+
+        <!-- ─── LISTING 5 ─── -->
+        <a class="listing-row" href="item.html">
+          <figure class="listing-img">
+            <img src="images/chair.jpg" alt="Gaming Chair" />
+          </figure>
+          <div class="listing-body">
+            <p class="listing-title">Gaming Chair (Ergonomic-ish)</p>
+            <p class="listing-meta">Used · Manchester · Seller: xX_GamerDad</p>
+            <p class="listing-desc">
+              One armrest wobbles. The other overcompensates. Lumbar support is
+              fixed in a position that may or may not suit your specific lumbar.
+              Good luck.
+            </p>
+          </div>
+          <div class="listing-price-col">
+            <p class="listing-price">£35</p>
+            <p class="listing-price-note">cash on collection</p>
+            <a class="listing-btn" href="item.html">View Item →</a>
+          </div>
+        </a>
+
+        <!-- ─── LISTING 6 ─── -->
+        <a class="listing-row" href="item.html">
+          <figure class="listing-img">
+            <img src="images/box.jpg" alt="Mystery Box" />
+          </figure>
+          <div class="listing-body">
+            <p class="listing-title">Box of Stuff (Assorted)</p>
+            <p class="listing-meta">
+              Unknown · London · Seller: MovingAgain2025
+            </p>
+            <p class="listing-desc">
+              Unopened since the move. That was three years ago. We've moved
+              twice since. Contents unknown. Could be treasure. Almost certainly
+              cables.
+            </p>
+          </div>
+          <div class="listing-price-col">
+            <p class="listing-price">£5</p>
+            <p class="listing-price-note">sold as seen<br />no refunds</p>
+            <a class="listing-btn" href="item.html">View Item →</a>
+          </div>
+        </a>
+      </div>
+      <!-- end .listings-list -->
+
+      <!-- ── SECTION: Newly Abandoned ── -->
+      <div class="section-header">
+        <div class="section-title">Newly Abandoned</div>
       </div>
 
-      <div class="listing-price-col">
-        <p class="listing-price">£45</p>                                    <!-- [EDIT: price] -->
-        <p class="listing-price-note">or nearest offer<br>cash only</p>     <!-- [EDIT: note — delete <p> if not needed] -->
-        <a class="listing-btn" href="item.html">View Item →</a>             <!-- [EDIT: same href as the row] -->
+      <div class="listings-list">
+        <!-- ─── LISTING 7 ─── -->
+        <a class="listing-row" href="item.html">
+          <figure class="listing-img">
+            <img src="images/bike.jpg" alt="Mountain Bike" />
+          </figure>
+          <div class="listing-body">
+            <p class="listing-title">Mountain Bike (Used Once)</p>
+            <p class="listing-meta">
+              Good Condition · Sheffield · Seller: FitIn2020
+            </p>
+            <p class="listing-desc">
+              Purchased with absolute conviction in January 2020. Used once, to
+              the shops. Then returned to the shed to reflect.
+            </p>
+          </div>
+          <div class="listing-price-col">
+            <p class="listing-price">£120</p>
+            <p class="listing-price-note">or nearest offer</p>
+            <a class="listing-btn" href="item.html">View Item →</a>
+          </div>
+        </a>
+
+        <!-- ─── LISTING 8 ─── -->
+        <a class="listing-row" href="item.html">
+          <figure class="listing-img">
+            <img src="images/guitar.jpg" alt="Acoustic Guitar" />
+          </figure>
+          <div class="listing-body">
+            <p class="listing-title">Acoustic Guitar (Slightly Warped)</p>
+            <p class="listing-meta">Used · Birmingham · Seller: WannaBeBand</p>
+            <p class="listing-desc">
+              Played for two weeks before going under the bed. Sounds perfectly
+              fine if you tune it correctly and manage your expectations.
+            </p>
+          </div>
+          <div class="listing-price-col">
+            <p class="listing-price">£30</p>
+            <p class="listing-price-note">collection preferred</p>
+            <a class="listing-btn" href="item.html">View Item →</a>
+          </div>
+        </a>
+
+        <!-- ─── LISTING 9 ─── -->
+        <a class="listing-row" href="item.html">
+          <figure class="listing-img">
+            <img src="images/fridge.jpg" alt="Mini Fridge" />
+          </figure>
+          <div class="listing-body">
+            <p class="listing-title">Mini Fridge (Slight Hum)</p>
+            <p class="listing-meta">
+              Working · Newcastle · Seller: StudentHalls
+            </p>
+            <p class="listing-desc">
+              Keeps things appropriately cold. The hum is consistent, rhythmic,
+              almost musical. Many owners have found it soothing. You might too.
+            </p>
+          </div>
+          <div class="listing-price-col">
+            <p class="listing-price">£40</p>
+            <p class="listing-price-note">must go today</p>
+            <a class="listing-btn" href="item.html">View Item →</a>
+          </div>
+        </a>
+
+        <!-- ─── LISTING 10 ─── -->
+        <a class="listing-row" href="item.html">
+          <figure class="listing-img">
+            <img src="images/printer.jpg" alt="Printer" />
+          </figure>
+          <div class="listing-body">
+            <p class="listing-title">Printer (Spiritual Experience)</p>
+            <p class="listing-meta">
+              Intermittent · Glasgow · Seller: OfficeEscape
+            </p>
+            <p class="listing-desc">
+              When it works it's genuinely like witnessing a small miracle. It
+              does not always work. Free ink included. Comes with unresolved
+              feelings.
+            </p>
+          </div>
+          <div class="listing-price-col">
+            <p class="listing-price">£15</p>
+            <p class="listing-price-note">or sensible offer</p>
+            <a class="listing-btn" href="item.html">View Item →</a>
+          </div>
+        </a>
       </div>
+      <!-- end .listings-list -->
+    </main>
 
-    </a>
-    <!-- ─── END LISTING 1 ─── -->
-
-
-    <!-- ─── LISTING 2 ─── -->
-    <a class="listing-row" href="item.html">
-      <figure class="listing-img">
-        <img src="images/sofa.jpg" alt="3-Seater Sofa">
-      </figure>
-      <div class="listing-body">
-        <p class="listing-title">3-Seater Sofa (Cat Not Included)</p>
-        <p class="listing-meta">Used · Edinburgh · Seller: Sandra_Fife</p>
-        <p class="listing-desc">
-          Very comfortable. The stain is character, not a warning.
-          Collection only — you bring the van, I'll provide moral support and tea.
-        </p>
+    <!-- ══ FOOTER ══ -->
+    <footer>
+      <div class="footer-logo">DodgyDeals</div>
+      <div class="footer-text">
+        © 2025 DodgyDeals Ltd. Not liable for anything. Seriously.
       </div>
-      <div class="listing-price-col">
-        <p class="listing-price">FREE</p>
-        <p class="listing-price-note">you collect<br>bring help</p>
-        <a class="listing-btn" href="item.html">View Item →</a>
-      </div>
-    </a>
-
-
-    <!-- ─── LISTING 3 ─── -->
-    <a class="listing-row" href="item.html">
-      <figure class="listing-img">
-        <img src="images/motorbike.jpg" alt="Honda CBR 600">
-      </figure>
-      <div class="listing-body">
-        <p class="listing-title">Honda CBR 600 "Track Day Spec"</p>
-        <p class="listing-meta">Used · Bristol · Seller: DaveB_Moto</p>
-        <p class="listing-desc">
-          Fully road legal pending one small MOT. The bodywork is cosmetic anyway.
-          Selling before my wife finds the receipt. Priced to move.
-        </p>
-      </div>
-      <div class="listing-price-col">
-        <p class="listing-price">£1,200</p>
-        <p class="listing-price-note">open to offers<br>serious only</p>
-        <a class="listing-btn" href="item.html">View Item →</a>
-      </div>
-    </a>
-
-
-    <!-- ─── LISTING 4 ─── -->
-    <a class="listing-row" href="item.html">
-      <figure class="listing-img">
-        <img src="images/tv.jpg" alt="42 inch Smart TV">
-      </figure>
-      <div class="listing-body">
-        <p class="listing-title">42" Smart TV (Mostly Smart)</p>
-        <p class="listing-meta">Used · Leeds · Seller: TechDump2024</p>
-        <p class="listing-desc">
-          Netflix works. YouTube stutters on Tuesdays specifically.
-          Remote is gone but apparently any remote works if you believe hard enough.
-        </p>
-      </div>
-      <div class="listing-price-col">
-        <p class="listing-price">£80</p>
-        <p class="listing-price-note">or nearest offer</p>
-        <a class="listing-btn" href="item.html">View Item →</a>
-      </div>
-    </a>
-
-
-    <!-- ─── LISTING 5 ─── -->
-    <a class="listing-row" href="item.html">
-      <figure class="listing-img">
-        <img src="images/chair.jpg" alt="Gaming Chair">
-      </figure>
-      <div class="listing-body">
-        <p class="listing-title">Gaming Chair (Ergonomic-ish)</p>
-        <p class="listing-meta">Used · Manchester · Seller: xX_GamerDad</p>
-        <p class="listing-desc">
-          One armrest wobbles. The other overcompensates. Lumbar support is fixed
-          in a position that may or may not suit your specific lumbar. Good luck.
-        </p>
-      </div>
-      <div class="listing-price-col">
-        <p class="listing-price">£35</p>
-        <p class="listing-price-note">cash on collection</p>
-        <a class="listing-btn" href="item.html">View Item →</a>
-      </div>
-    </a>
-
-
-    <!-- ─── LISTING 6 ─── -->
-    <a class="listing-row" href="item.html">
-      <figure class="listing-img">
-        <img src="images/box.jpg" alt="Mystery Box">
-      </figure>
-      <div class="listing-body">
-        <p class="listing-title">Box of Stuff (Assorted)</p>
-        <p class="listing-meta">Unknown · London · Seller: MovingAgain2025</p>
-        <p class="listing-desc">
-          Unopened since the move. That was three years ago. We've moved twice since.
-          Contents unknown. Could be treasure. Almost certainly cables.
-        </p>
-      </div>
-      <div class="listing-price-col">
-        <p class="listing-price">£5</p>
-        <p class="listing-price-note">sold as seen<br>no refunds</p>
-        <a class="listing-btn" href="item.html">View Item →</a>
-      </div>
-    </a>
-
-  </div><!-- end .listings-list -->
-
-
-  <!-- ── SECTION: Newly Abandoned ── -->
-  <div class="section-header">
-    <div class="section-title">Newly Abandoned</div>
-  </div>
-
-  <div class="listings-list">
-
-    <!-- ─── LISTING 7 ─── -->
-    <a class="listing-row" href="item.html">
-      <figure class="listing-img">
-        <img src="images/bike.jpg" alt="Mountain Bike">
-      </figure>
-      <div class="listing-body">
-        <p class="listing-title">Mountain Bike (Used Once)</p>
-        <p class="listing-meta">Good Condition · Sheffield · Seller: FitIn2020</p>
-        <p class="listing-desc">
-          Purchased with absolute conviction in January 2020.
-          Used once, to the shops. Then returned to the shed to reflect.
-        </p>
-      </div>
-      <div class="listing-price-col">
-        <p class="listing-price">£120</p>
-        <p class="listing-price-note">or nearest offer</p>
-        <a class="listing-btn" href="item.html">View Item →</a>
-      </div>
-    </a>
-
-
-    <!-- ─── LISTING 8 ─── -->
-    <a class="listing-row" href="item.html">
-      <figure class="listing-img">
-        <img src="images/guitar.jpg" alt="Acoustic Guitar">
-      </figure>
-      <div class="listing-body">
-        <p class="listing-title">Acoustic Guitar (Slightly Warped)</p>
-        <p class="listing-meta">Used · Birmingham · Seller: WannaBeBand</p>
-        <p class="listing-desc">
-          Played for two weeks before going under the bed.
-          Sounds perfectly fine if you tune it correctly and manage your expectations.
-        </p>
-      </div>
-      <div class="listing-price-col">
-        <p class="listing-price">£30</p>
-        <p class="listing-price-note">collection preferred</p>
-        <a class="listing-btn" href="item.html">View Item →</a>
-      </div>
-    </a>
-
-
-    <!-- ─── LISTING 9 ─── -->
-    <a class="listing-row" href="item.html">
-      <figure class="listing-img">
-        <img src="images/fridge.jpg" alt="Mini Fridge">
-      </figure>
-      <div class="listing-body">
-        <p class="listing-title">Mini Fridge (Slight Hum)</p>
-        <p class="listing-meta">Working · Newcastle · Seller: StudentHalls</p>
-        <p class="listing-desc">
-          Keeps things appropriately cold. The hum is consistent, rhythmic,
-          almost musical. Many owners have found it soothing. You might too.
-        </p>
-      </div>
-      <div class="listing-price-col">
-        <p class="listing-price">£40</p>
-        <p class="listing-price-note">must go today</p>
-        <a class="listing-btn" href="item.html">View Item →</a>
-      </div>
-    </a>
-
-
-    <!-- ─── LISTING 10 ─── -->
-    <a class="listing-row" href="item.html">
-      <figure class="listing-img">
-        <img src="images/printer.jpg" alt="Printer">
-      </figure>
-      <div class="listing-body">
-        <p class="listing-title">Printer (Spiritual Experience)</p>
-        <p class="listing-meta">Intermittent · Glasgow · Seller: OfficeEscape</p>
-        <p class="listing-desc">
-          When it works it's genuinely like witnessing a small miracle.
-          It does not always work. Free ink included. Comes with unresolved feelings.
-        </p>
-      </div>
-      <div class="listing-price-col">
-        <p class="listing-price">£15</p>
-        <p class="listing-price-note">or sensible offer</p>
-        <a class="listing-btn" href="item.html">View Item →</a>
-      </div>
-    </a>
-
-  </div><!-- end .listings-list -->
-
-</main>
-
-<!-- ══ FOOTER ══ -->
-<footer>
-  <div class="footer-logo">DodgyDeals</div>
-  <div class="footer-text">© 2025 DodgyDeals Ltd. Not liable for anything. Seriously.</div>
-  <div class="footer-text">Help · Trust & Safety (lol) · Report a Scam</div>
-</footer>
-
-</body>
+      <div class="footer-text">Help · Trust & Safety (lol) · Report a Scam</div>
+    </footer>
+  </body>
 </html>
