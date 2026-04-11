@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  ITEM PAGE TEMPLATE — DodgyDeals                                 ║
+  ║                                                                  ║
+  ║  HOW TO USE                                                      ║
+  ║  ──────────                                                      ║
+  ║  1. Copy this file and rename it for each item                   ║
+  ║     e.g. "sofa.html", "dell-laptop.html"                         ║
+  ║  2. Update the <title> tag below                                 ║
+  ║  3. Find every  [EDIT: ...]  comment and replace the value       ║
+  ║  4. Replace the image src paths with your actual photos          ║
+  ║  5. In index.html point the listing href to this new file        ║
+  ║                                                                  ║
+  ║  IMAGES                                                          ║
+  ║  ──────                                                          ║
+  ║  Put your photos in an "images/" folder next to the HTML files.  ║
+  ║  The gallery works with any number of photos from 1 to 4.        ║
+  ║  To use fewer than 4: delete the unwanted radio inputs,          ║
+  ║  gallery panels, and thumbnail labels (in matching sets of 3).   ║
+  ║                                                                  ║
+  ║  NO JAVASCRIPT is used anywhere on this page.                    ║
+  ║  The gallery is powered by CSS :checked selectors only.          ║
+  ╚══════════════════════════════════════════════════════════════════╝
+  -->
+
+  <title>Dell Laptop (Probably Fine) — DodgyDeals</title>  <!-- [EDIT: item name] -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══ HEADER — do not edit ══ -->
+<header>
+  <div style="display:flex; align-items:baseline; gap:0.75rem;">
+    <a class="logo" href="index.html">Dodgy<span>Deals</span></a>
+    <div class="tagline">someone else's problem, now yours™</div>
+  </div>
+  <div class="header-right">
+    <button class="btn btn-ghost">Sign In</button>
+    <button class="btn">Sell Junk</button>
+  </div>
+</header>
+
+<!-- ══ MAIN CONTENT ══ -->
+<main>
+
+  <a class="back-btn" href="index.html">← Back to listings</a>
+
+  <div class="item-layout">
+
+
+    <!-- ══════════════════════════════════════════════════
+         LEFT COLUMN: Gallery + Full Description
+    ══════════════════════════════════════════════════ -->
+    <div>
+
+      <!--
+      ┌──────────────────────────────────────────────────┐
+      │  IMAGE GALLERY  (pure CSS, no JavaScript)        │
+      │                                                  │
+      │  The gallery works like this:                    │
+      │    • Each photo has a hidden radio <input>       │
+      │    • Each thumbnail is a <label> for that input  │
+      │    • Clicking a label checks its radio           │
+      │    • CSS :checked rules show the right panel     │
+      │      and highlight the right thumbnail           │
+      │                                                  │
+      │  To swap in your photos:                         │
+      │    Replace src="images/laptop-1.jpg" etc.        │
+      │    with your actual file paths.                  │
+      │                                                  │
+      │  To use 3 photos instead of 4:                   │
+      │    Delete  input#img4,  the 4th .gallery-panel,  │
+      │    and the 4th .gallery-thumb label.             │
+      └──────────────────────────────────────────────────┘
+      -->
+      <div class="gallery">
+
+        <!-- Radio inputs — one per photo. The first is checked by default. -->
+        <input type="radio" name="gallery" id="img1" checked>  <!-- photo 1 -->
+        <input type="radio" name="gallery" id="img2">          <!-- photo 2 -->
+        <input type="radio" name="gallery" id="img3">          <!-- photo 3 -->
+        <input type="radio" name="gallery" id="img4">          <!-- photo 4 -->
+
+        <!-- Main display panels — one per photo, stacked on top of each other.
+             CSS shows only the one whose radio is checked.                    -->
+        <div class="gallery-panels">
+
+          <div class="gallery-panel">                                          <!-- panel 1 -->
+            <img src="images/laptop-1.jpg" alt="Laptop front view">           <!-- [EDIT: photo 1] -->
+          </div>
+
+          <div class="gallery-panel">                                          <!-- panel 2 -->
+            <img src="images/laptop-2.jpg" alt="Laptop keyboard close-up">   <!-- [EDIT: photo 2] -->
+          </div>
+
+          <div class="gallery-panel">                                          <!-- panel 3 -->
+            <img src="images/laptop-3.jpg" alt="Laptop ports and connectors"> <!-- [EDIT: photo 3] -->
+          </div>
+
+          <div class="gallery-panel">                                          <!-- panel 4 -->
+            <img src="images/laptop-4.jpg" alt="Laptop in box with charger">  <!-- [EDIT: photo 4] -->
+          </div>
+
+        </div><!-- end .gallery-panels -->
+
+        <!-- Thumbnail strip — each is a <label> that activates its radio.
+             Use the same image paths as the panels above.                    -->
+        <div class="gallery-thumbs">
+
+          <label class="gallery-thumb" for="img1">                            <!-- thumbnail 1 -->
+            <img src="images/laptop-1.jpg" alt="View 1">                      <!-- [EDIT: same as panel 1] -->
+          </label>
+
+          <label class="gallery-thumb" for="img2">                            <!-- thumbnail 2 -->
+            <img src="images/laptop-2.jpg" alt="View 2">                      <!-- [EDIT: same as panel 2] -->
+          </label>
+
+          <label class="gallery-thumb" for="img3">                            <!-- thumbnail 3 -->
+            <img src="images/laptop-3.jpg" alt="View 3">                      <!-- [EDIT: same as panel 3] -->
+          </label>
+
+          <label class="gallery-thumb" for="img4">                            <!-- thumbnail 4 -->
+            <img src="images/laptop-4.jpg" alt="View 4">                      <!-- [EDIT: same as panel 4] -->
+          </label>
+
+        </div><!-- end .gallery-thumbs -->
+
+      </div><!-- end .gallery -->
+
+
+      <!-- ── Full description ── -->
+      <div class="desc-box">
+        <div class="desc-box-title">Full Description</div>
+
+        <!-- [EDIT: replace with your item's description. Use <br><br> between paragraphs.] -->
+        <div class="desc-text">
+          Right so this laptop. Bought it in 2019 off a bloke at a car boot.
+          He said it was his work laptop but I don't know what work he was doing on it.
+          <br><br>
+          It runs Windows 10 fine. Windows 11 it started crying. Boots up in about
+          2 minutes which I think is reasonable for a machine that's been through
+          what this machine has been through.
+          <br><br>
+          Fan makes a sort of whirring noise when it's thinking hard. I find it
+          comforting. Like it's trying its best.
+          <br><br>
+          Battery holds about 45 minutes off charger. Don't let it die or it gets
+          moody. The 'G' key is sticky — was a Ribena incident, I'd rather not discuss it.
+          <br><br>
+          Selling because I got a new one. This one deserves a loving home.
+          Or at least a home. Or a shed with WiFi.
+        </div>
+
+        <!-- ── Specs table ──
+             Edit the .spec-value text.
+             Add rows in pairs of two .spec-item divs.
+             Remove pairs you don't need.             -->
+        <div class="specs-grid" style="margin-top:1.5rem;">
+
+          <div class="spec-item">
+            <div class="spec-label">Condition</div>
+            <div class="spec-value">Used (Loved)</div>          <!-- [EDIT] -->
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Brand</div>
+            <div class="spec-value">Dell (ish)</div>            <!-- [EDIT] -->
+          </div>
+
+          <div class="spec-item">
+            <div class="spec-label">Collection</div>
+            <div class="spec-value">Required</div>              <!-- [EDIT] -->
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Shipping</div>
+            <div class="spec-value">Not Ideally</div>           <!-- [EDIT] -->
+          </div>
+
+          <div class="spec-item">
+            <div class="spec-label">Age</div>
+            <div class="spec-value">5+ Years</div>              <!-- [EDIT] -->
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Returns</div>
+            <div class="spec-value">No Chance</div>             <!-- [EDIT] -->
+          </div>
+
+        </div>
+      </div><!-- end .desc-box -->
+
+    </div><!-- end left column -->
+
+
+    <!-- ══════════════════════════════════════════════════
+         RIGHT COLUMN: Purchase Panel
+    ══════════════════════════════════════════════════ -->
+    <div class="detail-panel">
+
+      <div class="detail-title">Dell Laptop (Probably Fine)</div>    <!-- [EDIT: item name] -->
+      <div class="detail-meta">Listed 3 days ago · 47 views · Electronics</div>  <!-- [EDIT] -->
+
+      <div class="detail-price-row">
+        <div class="detail-price">£45</div>                          <!-- [EDIT: price] -->
+        <div class="detail-price-note">
+          or nearest offer<br>cash only please                       <!-- [EDIT: or delete this div] -->
+        </div>
+      </div>
+
+      <div class="action-row">
+        <button class="btn-buy">Buy It Now</button>
+        <button class="btn-offer">Make Offer</button>
+        <button class="btn-offer">Message Seller</button>
+      </div>
+
+      <div class="seller-box">
+        <div class="seller-box-title">Seller</div>
+        <div class="seller-name-big">GarethM99</div>                 <!-- [EDIT: seller username] -->
+        <div class="seller-stats">
+          <!-- [EDIT: ★ = filled star, ☆ = empty star] -->
+          <span class="stars">★★★★☆</span> 4.1 · 38 sales<br>
+          Usually replies: <strong>eventually</strong><br>           <!-- [EDIT] -->
+          Member since: <strong>2021</strong>                        <!-- [EDIT] -->
+        </div>
+      </div>
+
+      <div class="seller-note-box">
+        <div class="seller-note-label">Seller's Note</div>
+        <!-- [EDIT: seller's pickup/contact instructions] -->
+        <div class="seller-note-text">
+          "Collection from NG3. Evenings or weekends best. Don't ring the doorbell,
+          it wakes the dog. Text first. I won't respond straight away but I will respond."
+        </div>
+      </div>
+
+    </div><!-- end right column -->
+
+  </div><!-- end .item-layout -->
+
+</main>
+
+<!-- ══ FOOTER — do not edit ══ -->
+<footer>
+  <div class="footer-logo">DodgyDeals</div>
+  <div class="footer-text">© 2025 DodgyDeals Ltd. Not liable for anything. Seriously.</div>
+  <div class="footer-text">Help · Trust & Safety (lol) · Report a Scam</div>
+</footer>
+
+</body>
+</html>
