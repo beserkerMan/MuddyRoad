@@ -4,98 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--
-  ╔══════════════════════════════════════════════════════════════════╗
-  ║  ITEM PAGE TEMPLATE — DodgyDeals                                 ║
-  ║                                                                  ║
-  ║  HOW TO USE                                                      ║
-  ║  ──────────                                                      ║
-  ║  1. Copy this file and rename it for each item                   ║
-  ║     e.g. "sofa.html", "dell-laptop.html"                         ║
-  ║  2. Update the <title> tag below                                 ║
-  ║  3. Find every  [EDIT: ...]  comment and replace the value       ║
-  ║  4. Replace the image src paths with your actual photos          ║
-  ║  5. In index.html point the listing href to this new file        ║
-  ║                                                                  ║
-  ║  IMAGES                                                          ║
-  ║  ──────                                                          ║
-  ║  Put your photos in an "images/" folder next to the HTML files.  ║
-  ║  The gallery works with any number of photos from 1 to 4.        ║
-  ║  To use fewer than 4: delete the unwanted radio inputs,          ║
-  ║  gallery panels, and thumbnail labels (in matching sets of 3).   ║
-  ║                                                                  ║
-  ║  NO JAVASCRIPT is used anywhere on this page.                    ║
-  ║  The gallery is powered by CSS :checked selectors only.          ║
-  ╚══════════════════════════════════════════════════════════════════╝
-  -->
-
-    <title>Dell Laptop (Probably Fine) — DodgyDeals</title>
-    <!-- [EDIT: item name] -->
+    <title>Dell Laptop (Probably Fine) — MuddyRoad</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <!-- ══ HEADER — do not edit ══ -->
     <header>
       <div class="header">
         <a class="logo" href="index.html">Muddy<span>Road</span></a>
       </div>
     </header>
 
-    <!-- ══ MAIN CONTENT ══ -->
     <main>
       <a class="back-btn" href="index.html">Tillbaka</a>
 
       <div class="item-layout">
-        <!-- ══════════════════════════════════════════════════
-         LEFT COLUMN: Gallery + Full Description
-    ══════════════════════════════════════════════════ -->
         <div>
-          <!--
-      ┌──────────────────────────────────────────────────┐
-      │  IMAGE GALLERY  (pure CSS, no JavaScript)        │
-      │                                                  │
-      │  The gallery works like this:                    │
-      │    • Each photo has a hidden radio <input>       │
-      │    • Each thumbnail is a <label> for that input  │
-      │    • Clicking a label checks its radio           │
-      │    • CSS :checked rules show the right panel     │
-      │      and highlight the right thumbnail           │
-      │                                                  │
-      │  To swap in your photos:                         │
-      │    Replace src="images/laptop-1.jpg" etc.        │
-      │    with your actual file paths.                  │
-      │                                                  │
-      │  To use 3 photos instead of 4:                   │
-      │    Delete  input#img4,  the 4th .gallery-panel,  │
-      │    and the 4th .gallery-thumb label.             │
-      └──────────────────────────────────────────────────┘
-      -->
           <div class="gallery">
             <div class="gallery-viewer">
               <img id="img1" src="images/muscab.webp" alt="Item photo" />
-              <!-- [EDIT] -->
             </div>
           </div>
-          <!-- end .gallery -->
-
-          <!-- ── Full description ── -->
-          <!-- end .desc-box -->
         </div>
-        <!-- end left column -->
 
-        <!-- ══════════════════════════════════════════════════
-         RIGHT COLUMN: Purchase Panel
-    ══════════════════════════════════════════════════ -->
         <div class="detail-panel">
           <div class="detail-title">Dell Laptop (Probably Fine)</div>
-          <!-- [EDIT: item name] -->
-          <!-- [EDIT] -->
 
           <div class="detail-price-row">
             <div class="detail-price">£45</div>
-            <!-- [EDIT: price] -->
           </div>
 
           <div class="action-row">
@@ -103,39 +41,38 @@
           </div>
 
           <div class="desc-box">
-            <!-- [EDIT: replace with your item's description. Use <br><br> between paragraphs.] -->
             <div class="desc-text">
-              Right so this laptop. Bought it in 2019 off a bloke at a car boot.
-              He said it was his work laptop but I don't know what work he was
-              doing on it.
-              <br /><br />
-              It runs Windows 10 fine. Windows 11 it started crying. Boots up in
-              about 2 minutes which I think is reasonable for a machine that's
-              been through what this machine has been through.
-              <br /><br />
-              Fan makes a sort of whirring noise when it's thinking hard. I find
-              it comforting. Like it's trying its best.
-              <br /><br />
-              Battery holds about 45 minutes off charger. Don't let it die or it
-              gets moody. The 'G' key is sticky — was a Ribena incident, I'd
-              rather not discuss it.
-              <br /><br />
-              Selling because I got a new one. This one deserves a loving home.
-              Or at least a home. Or a shed with WiFi.
-            </div>
+              Köpte den här laptopen 2019 av en kille på en loppis. Han sa att
+              det var hans jobb-dator, men jag har ingen aning om vad han gjorde
+              på den egentligen.
 
-            <!-- ── Specs table ──
-             Edit the .spec-value text.
-             Add rows in pairs of two .spec-item divs.
-             Remove pairs you don't need.             -->
+              <br /><br />
+
+              Den kör Windows 10 utan problem. Windows 11 fick den dock lite
+              panik av. Startar på ungefär 2 minuter, vilket jag tycker är helt
+              okej för en maskin med lite historia.
+
+              <br /><br />
+
+              Fläkten låter lite när den jobbar, men jag tycker mest det känns
+              tryggt. Som att den försöker.
+
+              <br /><br />
+
+              Batteriet håller runt 45 minuter utan laddare. Låt den inte dö, då
+              blir den lite sur. G-tangenten är lite kladdig efter en
+              Ribena-incident jag helst inte vill gå in på.
+
+              <br /><br />
+
+              Säljer för att jag har en ny nu. Den här förtjänar ett hem. Eller
+              åtminstone ett rum med WiFi.
+            </div>
           </div>
         </div>
-        <!-- end right column -->
       </div>
-      <!-- end .item-layout -->
     </main>
 
-    <!-- ══ FOOTER — do not edit ══ -->
     <footer>
       <div class="footer-logo">MuddyRoad</div>
     </footer>

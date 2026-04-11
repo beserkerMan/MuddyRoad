@@ -1,41 +1,11 @@
-/* ============================================================================= 
-   TABLE OF CONTENTS:
-     1.  Design Tokens (CSS Variables)
-     2.  Reset & Base Styles
-     3.  Header
-     4.  Category Bar
-     5.  Main Content Wrapper
-     6.  Home Page — Section Headers
-     7.  Home Page — Listing Rows
-     8.  Item Page — Layout & Back Button
-     9.  Item Page — CSS-only Image Gallery (no JavaScript)
-    10.  Item Page — Detail Panel (Title, Price, Actions)
-    11.  Item Page — Seller Box
-    12.  Item Page — Description & Specs
-    13.  Footer
-   ============================================================================= */
-
-
-/* =============================================================================
-   1. DESIGN TOKENS
-   ============================================================================= */
-
 :root {
-  --yellow: #FFE033;
-  --black:  #111111;
-  --white:  #F5F2E8;
-  --red:    #D93B2B;
-  --gray:   #2A2A2A;
-
-  /* softer instead of harsh borders */
-  --border: none;
-  --soft-border: 1px solid #e5e5e5;
+  --yellow: #ffe033;
+  --black: #111111;
+  --white: #f5f2e8;
+  --red: #d93b2b;
+  --gray: #2a2a2a;
+  --border: 1px solid #e5e5e5;
 }
-
-
-/* =============================================================================
-   2. RESET & BASE STYLES
-   ============================================================================= */
 
 * {
   margin: 0;
@@ -44,31 +14,32 @@
 }
 
 body {
+  min-height: 100vh;
   background: var(--white);
   color: var(--black);
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 14px;
-  min-height: 100vh;
 }
-
-
-/* =============================================================================
-   3. HEADER
-   ============================================================================= */
 
 header {
   background: var(--yellow);
-  border-bottom: var(--soft-border);
+  border-bottom: var(--border);
+}
 
-  text-align: center;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 72px;
+  padding: 1rem 2rem;
 }
 
 .logo {
-  font-family: 'Bebas Neue', sans-serif;
+  color: var(--black);
+  text-decoration: none;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 2rem;
   letter-spacing: 2px;
-  text-decoration: none;
-  color: var(--black);
   white-space: nowrap;
 }
 
@@ -76,153 +47,11 @@ header {
   color: var(--red);
 }
 
-.tagline {
-  font-size: 10px;
-  font-style: italic;
-  color: var(--gray);
-  white-space: nowrap;
-  display: none;
-}
-
-@media (min-width: 640px) {
-  .tagline { display: block; }
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.btn {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  border: var(--border);
-  padding: 6px 14px;
-  cursor: pointer;
-  background: var(--black);
-  color: var(--yellow);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: transform 0.1s;
-  white-space: nowrap;
-}
-
-.btn:hover {
-  background: var(--red);
-  
-}
-
-.btn-ghost {
-  background: transparent;
-  color: var(--black);
-}
-
-.btn-ghost:hover {
-  background: var(--black);
-  color: var(--yellow);
-}
-
-
-/* =============================================================================
-   4. CATEGORY BAR
-   ============================================================================= */
-
-.cat-bar {
-  background: var(--white);
-  border-bottom: var(--border);
-  padding: 0 2rem;
-  display: flex;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-.cat-bar::-webkit-scrollbar {
-  display: none;
-}
-
-.cat-item {
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 10px 16px;
-  cursor: pointer;
-  border-right: 1px solid #ddd;
-  white-space: nowrap;
-  transition: background 0.1s;
-}
-
-.cat-item:hover,
-.cat-item.active {
-  background: var(--yellow);
-}
-
-
-/* =============================================================================
-   5. MAIN CONTENT WRAPPER
-   ============================================================================= */
-
 main {
-  padding: 2rem;
   max-width: 1100px;
   margin: 0 auto;
+  padding: 2rem;
 }
-
-
-/* =============================================================================
-   6. HOME PAGE — SECTION HEADERS
-   ============================================================================= */
-
-.section-header {
-  margin-bottom: 1.25rem;
-  border-bottom: var(--border);
-  padding-bottom: 0.5rem;
-}
-
-.section-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.75rem;
-  letter-spacing: 1px;
-}
-
-
-/* =============================================================================
-   7. HOME PAGE — LISTING ROWS
-
-   Each row is a CSS Grid with three fixed columns:
-     [image 160px] [description 1fr] [price 160px]
-
-   The image column contains a <figure> that is strictly 160×160px.
-   Because the image is taken OUT of flow by being a fixed-size grid cell
-   child, it cannot affect the row height — the middle text column drives
-   the height, and the price column simply aligns its content to the centre
-   of whatever height the row ends up being.
-
-   This is the simplest, most cross-browser-safe layout for this pattern.
-
-   HOW TO ADD A NEW LISTING
-   ─────────────────────────
-   In index.html, copy the block between START LISTING and END LISTING.
-   Replace the values marked with [EDIT]. The structure never changes.
-
-     <a class="listing-row" href="your-item-page.html">
-       <figure class="listing-img">
-         <img src="your-photo.jpg" alt="Item name">
-       </figure>
-       <div class="listing-body">
-         <p class="listing-title">Item Name</p>
-         <p class="listing-meta">Condition · Location · Seller</p>
-         <p class="listing-desc">Short teaser description.</p>
-       </div>
-       <div class="listing-price-col">
-         <p class="listing-price">£99</p>
-         <p class="listing-price-note">or nearest offer</p>
-         <span class="listing-btn">View Item →</span>
-       </div>
-     </a>
-   ============================================================================= */
 
 .listings-list {
   display: flex;
@@ -231,160 +60,105 @@ main {
   margin-bottom: 3rem;
 }
 
-/* ── The row itself ──
-   display: grid is the key fix.
-   grid-template-columns pins the image and price to exact pixel widths.
-   The middle column takes the rest. Nothing can push anything out of place. */
 .listing-row {
   display: grid;
-  grid-template-columns: var(--img-size) 1fr 160px;
-  border-bottom: var(--border);
+  grid-template-columns: 200px minmax(0, 1fr) 120px;
+  gap: 0;
   background: var(--white);
-  text-decoration: none;
   color: var(--black);
-  transition: background 0.1s;
+  text-decoration: none;
+  border-bottom: var(--border);
+  transition: background 0.15s ease;
 }
 
 .listing-row:hover {
-  background: #fffbe6;
+  background: #fff8cf;
 }
 
-/* ── Image column ──
-   <figure> is a fixed square that never grows or shrinks.
-   overflow:hidden clips any image that exceeds the box.
-   align-self:stretch makes the background fill the full row height
-   (so the right border looks complete) while the img inside stays square. */
-.listing-img {
-  width: 200px;
-  height: 200px;
-
-  display: flex;
-  align-items: center;     
-  justify-content: center;   
-  margin: auto;   
-}
-
+.listing-img,
 .listing-img2 {
-  width: 400px;
-  height: 200px;
-
+  width: 100%;
+  height: 100%;
   display: flex;
-  align-items: center;     
-  justify-content: center;   
-  margin: auto;   
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-/* The actual image inside the listing square.
-   object-fit: cover fills the box without stretching or letterboxing.
-   To switch to letterbox mode, change cover → contain. */
-.listing-img img {
+.listing-img img,
+.listing-img2 img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* ── Text column ── */
 .listing-body {
-  padding: 0.5rem 1.25rem;
+  min-width: 0;
+  padding: 1rem 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-width: 0;    /* stops long words overflowing the grid cell */
 }
 
 .listing-title {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 1.3rem;
-  letter-spacing: 0.5px;
   line-height: 1.1;
-
+  letter-spacing: 0.5px;
   text-align: center;
 }
- 
+
 .listing-desc {
+  margin-top: 0.4rem;
   font-size: 12px;
+  line-height: 1.5;
   color: #444;
   font-style: italic;
-  line-height: 1.5;
   text-align: center;
 }
 
-/* ── Price column ──
-   align-self: stretch + display:flex+justify-content:center means the column
-   fills the full row height (border visible top-to-bottom) while content
-   sits in the middle — regardless of how tall the text column makes the row. */
 .listing-price-col {
-  flex-direction: column;
-  text-align: center;
   padding: 1rem;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .listing-price {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 1.8rem;
-  letter-spacing: 1px;
   line-height: 1;
-}
-
-.listing-price-note {
-  font-size: 10px;
-  color: #777;
-  font-style: italic;
-  line-height: 1.4;
+  letter-spacing: 1px;
 }
 
 .listing-btn {
-  display: inline-block;
   margin-top: 6px;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  display: inline-block;
   padding: 6px 10px;
   background: var(--black);
   color: var(--yellow);
-  border: var(--border);
-  text-decoration: none;
-  transition: transform 0.1s;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   white-space: nowrap;
-  cursor: pointer;
 }
-
-.listing-btn:hover {
-  background-color: #D93B2B;
-}
-
-@media (max-width: 580px) {
-  :root { --img-size: 90px; }
-  .listing-row { grid-template-columns: var(--img-size) 1fr 110px; }
-  .listing-price { font-size: 1.3rem; }
-  .listing-btn   { font-size: 10px; padding: 5px 7px; }
-}
-
-
-/* =============================================================================
-   8. ITEM PAGE — LAYOUT & BACK BUTTON
-
-   Two-column grid: gallery + description on the left, purchase panel on the
-   right. On narrow screens the two columns stack to a single column.
-   ============================================================================= */
 
 .back-btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--black);
-  text-decoration: none;
   margin-bottom: 1.5rem;
   padding: 6px 0;
-} 
+  color: var(--black);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 
 .item-layout {
   display: grid;
@@ -392,121 +166,35 @@ main {
   gap: 2rem;
 }
 
-@media (min-width: 740px) {
-  .item-layout { grid-template-columns: 1fr 1fr; }
-}
-
-@media (min-width: 960px) {
-  .item-layout { grid-template-columns: 3fr 2fr; }
-}
-
-
-/* =============================================================================
-   9. ITEM PAGE — CSS-ONLY IMAGE GALLERY  (zero JavaScript)
-
-   How it works:
-   ─────────────
-   Each photo gets a hidden <input type="radio"> before it.
-   The thumbnails are <label> elements that target those radio inputs.
-   When a label is clicked the radio becomes :checked.
-   CSS :checked ~ combinators then show/hide the main image panels
-   and highlight the correct thumbnail.
-
-   HTML structure (see item.html for full example):
-
-     <div class="gallery">
-
-       <!-- one radio + image panel per photo -->
-       <input type="radio" name="gallery" id="img1" checked>
-       <input type="radio" name="gallery" id="img2">
-       <input type="radio" name="gallery" id="img3">
-       <input type="radio" name="gallery" id="img4">
-
-       <!-- main display panels — one per radio, stacked -->
-       <div class="gallery-panels">
-         <div class="gallery-panel">
-           <img src="photo1.jpg" alt="View 1">
-         </div>
-         <div class="gallery-panel">
-           <img src="photo2.jpg" alt="View 2">
-         </div>
-         <div class="gallery-panel">
-           <img src="photo3.jpg" alt="View 3">
-         </div>
-         <div class="gallery-panel">
-           <img src="photo4.jpg" alt="View 4">
-         </div>
-       </div>
-
-       <!-- thumbnail strip — labels that check the radios -->
-       <div class="gallery-thumbs">
-         <label class="gallery-thumb" for="img1">
-           <img src="photo1.jpg" alt="Thumbnail 1">
-         </label>
-         <label class="gallery-thumb" for="img2">
-           <img src="photo2.jpg" alt="Thumbnail 2">
-         </label>
-         <label class="gallery-thumb" for="img3">
-           <img src="photo3.jpg" alt="Thumbnail 3">
-         </label>
-         <label class="gallery-thumb" for="img4">
-           <img src="photo4.jpg" alt="Thumbnail 4">
-         </label>
-       </div>
-
-     </div>
-
-   To add or remove photos:
-     • Add/remove a matching radio input, gallery-panel, and gallery-thumb label.
-     • The :nth-child selectors below handle up to 4 photos by default.
-       For more, extend the pattern by adding more :checked selectors.
-   ============================================================================= */
-
-/* Wrapper that holds the radios, panels, and thumbnail strip */
 .gallery {
   margin-bottom: 1.5rem;
 }
 
 .gallery-viewer {
-  display: flex;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  border: 2px solid #111111;
-  background: #e8e4d8;
-  margin-bottom: 0.75rem;
   aspect-ratio: 1 / 1;
-  scrollbar-width: none;
-}
-
-.gallery-viewer::-webkit-scrollbar {
-  display: none;
+  overflow: hidden;
+  background: #e8e4d8;
+  border: 2px solid var(--black);
 }
 
 .gallery-viewer img {
-  flex-shrink: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  scroll-snap-align: start;
+  display: block;
 }
 
-/* =============================================================================
-   10. ITEM PAGE — DETAIL PANEL
-   ============================================================================= */
+.detail-panel {
+  display: flex;
+  flex-direction: column;
+}
 
 .detail-title {
-  font-family: 'Bebas Neue', sans-serif;
+  margin-bottom: 0.25rem;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 2.5rem;
   line-height: 1;
   letter-spacing: 1px;
-  margin-bottom: 0.25rem;
-}
-
-.detail-meta {
-  font-size: 11px;
-  color: #888;
-  margin-bottom: 1rem;
 }
 
 .detail-price-row {
@@ -517,117 +205,38 @@ main {
 }
 
 .detail-price {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 3rem;
+  line-height: 1;
   letter-spacing: 2px;
-}
-
-.detail-price-note {
-  font-size: 11px;
-  color: #666;
-  font-style: italic;
 }
 
 .action-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 8px;
   margin-bottom: 1.5rem;
 }
 
 .btn-buy {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
   padding: 14px;
-  cursor: pointer;
+  border: 0;
   background: var(--black);
   color: var(--yellow);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  transition: transform 0.1s;
+  cursor: pointer;
 }
 
 .btn-buy:hover {
-  background-color: #D93B2B;
-  
+  background: var(--red);
 }
-
-/* =============================================================================
-   11. ITEM PAGE — SELLER BOX
-   ============================================================================= */
-
-.seller-box {
-  border: var(--border);
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.seller-box-title {
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #888;
-  margin-bottom: 0.5rem;
-}
-
-.seller-name-big {
-  font-weight: 700;
-  font-size: 15px;
-  margin-bottom: 4px;
-}
-
-.seller-stats {
-  font-size: 11px;
-  color: #666;
-}
-
-.stars {
-  color: var(--red);
-  letter-spacing: -2px;
-}
-
-.seller-note-box {
-  border: var(--border);
-  padding: 1rem;
-  background: #fff8e8;
-  margin-bottom: 1.5rem;
-}
-
-.seller-note-label {
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #888;
-  margin-bottom: 6px;
-}
-
-.seller-note-text {
-  font-size: 12px;
-  font-style: italic;
-  line-height: 1.6;
-  color: #444;
-}
-
-
-/* =============================================================================
-   12. ITEM PAGE — DESCRIPTION & SPECS
-   ============================================================================= */
 
 .desc-box {
   margin-bottom: 1.5rem;
-}
-
-.desc-box-title {
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #888;
-  margin-bottom: 0.5rem;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 4px;
 }
 
 .desc-text {
@@ -636,58 +245,77 @@ main {
   color: #333;
 }
 
-.specs-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-top: 1px solid #ddd;
-  border-left: 1px solid #ddd;
-  margin-top: 1rem;
-}
-
-.spec-item {
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  padding: 6px 10px;
-}
-
-.spec-label {
-  font-size: 10px;
-  color: #999;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.spec-value {
-  font-size: 13px;
-  font-weight: 700;
-}
-
-
-/* =============================================================================
-   13. FOOTER
-   ============================================================================= */
-
 footer {
-  border-top: var(--border);
+  margin-top: 4rem;
   padding: 1.5rem 2rem;
   background: var(--black);
   color: var(--white);
-  font-size: 11px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 1rem;
-  margin-top: 4rem;
+  flex-wrap: wrap;
 }
 
 .footer-logo {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 1.5rem;
-  color: var(--yellow);
   letter-spacing: 2px;
+  color: var(--yellow);
 }
 
 .footer-text {
   color: #888;
+  font-size: 11px;
+}
+
+@media (max-width: 580px) {
+  main {
+    padding: 1rem;
+  }
+
+  .listing-row {
+    grid-template-columns: 90px minmax(0, 1fr) 90px;
+  }
+
+  .listing-body {
+    padding: 0.75rem;
+  }
+
+  .listing-title {
+    font-size: 1.1rem;
+  }
+
+  .listing-desc {
+    font-size: 11px;
+  }
+
+  .listing-price {
+    font-size: 1.3rem;
+  }
+
+  .listing-btn {
+    font-size: 10px;
+    padding: 5px 7px;
+  }
+
+  .detail-title {
+    font-size: 2rem;
+  }
+
+  .detail-price {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .item-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 960px) {
+  .item-layout {
+    grid-template-columns: 3fr 2fr;
+  }
 }
