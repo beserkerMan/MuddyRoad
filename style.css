@@ -266,6 +266,16 @@ main {
   margin: auto;   
 }
 
+.listing-img2 {
+  width: 400px;
+  height: 200px;
+
+  display: flex;
+  align-items: center;     
+  justify-content: center;   
+  margin: auto;   
+}
+
 /* The actual image inside the listing square.
    object-fit: cover fills the box without stretching or letterboxing.
    To switch to letterbox mode, change cover → contain. */
