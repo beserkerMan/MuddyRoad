@@ -567,9 +567,6 @@ main {
   align-items: baseline;
   gap: 1rem;
   margin-bottom: 1.25rem;
-  padding: 1rem;
-  background: var(--yellow);
-  border: var(--border);
 }
 
 .detail-price {
@@ -598,37 +595,14 @@ main {
   padding: 14px;
   background: var(--black);
   color: var(--yellow);
-  border: var(--border);
-  cursor: pointer;
   text-transform: uppercase;
-  letter-spacing: 1px;
   transition: transform 0.1s;
-  grid-column: 1 / -1;
 }
 
 .btn-buy:hover {
   transform: translate(-2px, -2px);
   box-shadow: 4px 4px 0 var(--red);
 }
-
-.btn-offer {
-  font-family: 'Space Mono', monospace;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 10px;
-  background: transparent;
-  color: var(--black);
-  border: var(--border);
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: background 0.1s;
-}
-
-.btn-offer:hover {
-  background: var(--yellow);
-}
-
 
 /* =============================================================================
    11. ITEM PAGE — SELLER BOX
