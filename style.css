@@ -384,11 +384,7 @@ main {
   text-decoration: none;
   margin-bottom: 1.5rem;
   padding: 6px 0;
-}
-
-.back-btn:hover {
-  text-decoration: underline;
-}
+} 
 
 .item-layout {
   display: grid;
