@@ -81,14 +81,14 @@ nav a:hover {
 
 
 #hero {
-  background-image: url("media/unnamed.png");
+  background-image: url("media/2910bb796a6e000496a070340a3dd490.jpeg");
   background-size: cover;        /* makes it fill the whole area */
   background-position: center;   /* keeps it centered */
   background-repeat: no-repeat;  /* prevents tiling */
 
   text-align: center;
   padding-top: 4rem;
-  padding-bottom: 15rem;
+  padding-bottom: 20rem;
   max-width: 100%;
 }
 
