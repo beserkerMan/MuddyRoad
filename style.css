@@ -79,12 +79,17 @@ nav a:hover {
    HERO – stor välkomstsektion
    ============================================= */
 
+
 #hero {
+  background-image: url("media/unnamed.png");
+  background-size: cover;        /* makes it fill the whole area */
+  background-position: center;   /* keeps it centered */
+  background-repeat: no-repeat;  /* prevents tiling */
+
   text-align: center;
   padding-top: 4rem;
-  padding-bottom: 4rem;
-  background: var(--ljus);
-  max-width: 100%;          /* hero sträcker sig hela bredden */
+  padding-bottom: 15rem;
+  max-width: 100%;
 }
 
 #hero h1 {
