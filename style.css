@@ -1,0 +1,290 @@
+/* =============================================
+   FÄRGER – ändra här för att byta tema
+   ============================================= */
+
+:root {
+  --rod:      #8B1A1A;   /* huvudfärg: röd */
+  --guld:     #C9922A;   /* accentfärg: guld */
+  --ljus:     #F5EDD8;   /* ljus bakgrund */
+  --mork:     #1C1C1C;   /* mörk text */
+  --gra:      #666;      /* grå hjälptext */
+}
+
+
+/* =============================================
+   GRUNDINSTÄLLNINGAR
+   ============================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, serif;  /* byt font här */
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--mork);
+  background: #fff;
+}
+
+/* Begränsar innehållets bredd och centrerar det */
+nav,
+section,
+footer {
+  max-width: 800px;       /* ändra bredd här */
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+
+/* =============================================
+   NAVIGATION
+   ============================================= */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 2px solid var(--rod);
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--rod);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;        /* avstånd mellan länkarna */
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--mork);
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  color: var(--rod);  /* hoverfärg */
+}
+
+
+/* =============================================
+   HERO – stor välkomstsektion
+   ============================================= */
+
+#hero {
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: var(--ljus);
+  max-width: 100%;          /* hero sträcker sig hela bredden */
+}
+
+#hero h1 {
+  font-size: 2.8rem;        /* rubrikstorlek */
+  color: var(--rod);
+  margin-bottom: 0.5rem;
+}
+
+#hero p {
+  font-size: 1.1rem;
+  color: var(--gra);
+  margin-bottom: 2rem;
+}
+
+/* Knappar i hero */
+#hero a {
+  display: inline-block;
+  margin: 0.3rem;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  border: 2px solid var(--rod);
+  color: var(--rod);
+  font-size: 0.95rem;
+}
+
+#hero a:hover {
+  background: var(--rod);
+  color: #fff;
+}
+
+
+/* =============================================
+   SEKTIONER – gemensamma inställningar
+   ============================================= */
+
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #ddd;  /* skiljelinje mellan sektioner */
+}
+
+section h2 {
+  font-size: 1.8rem;
+  color: var(--rod);
+  margin-bottom: 1rem;
+}
+
+section p {
+  color: var(--gra);
+  max-width: 600px;
+}
+
+
+/* =============================================
+   MENY
+   ============================================= */
+
+/* Varje grupp av pizzor */
+.meny-grupp {
+  margin-bottom: 2.5rem;
+}
+
+.meny-grupp h3 {
+  font-size: 1.1rem;
+  color: var(--rod);
+  border-bottom: 1px solid var(--guld);
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Liten notis under grupprubrik */
+.not {
+  font-size: 0.82rem;
+  color: var(--gra);
+  margin-bottom: 0.8rem;
+  font-style: italic;
+}
+
+/* Ta bort standardpunkterna i listan */
+.meny-grupp ul {
+  list-style: none;
+}
+
+/* Varje pizzarad */
+.meny-grupp li {
+  display: flex;
+  gap: 0.6rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px dotted #e0e0e0;  /* streckad linje mellan rätter */
+  font-size: 0.95rem;
+}
+
+/* Pizzanumret (t.ex. "1", "12") */
+.nr {
+  color: var(--gra);
+  min-width: 1.8rem;    /* gör att namnen hamnar i linje */
+  flex-shrink: 0;
+}
+
+/* Pizzanamnet */
+.namn {
+  font-weight: bold;
+  min-width: 160px;     /* ändra om namn är längre/kortare */
+  flex-shrink: 0;
+}
+
+/* Ingredienserna */
+.ing {
+  color: var(--gra);
+  font-size: 0.88rem;
+}
+
+
+/* =============================================
+   KONTAKT
+   ============================================= */
+
+#kontakt address {
+  font-style: normal;     /* tar bort kursiv stil från address-taggen */
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+#kontakt address a {
+  color: var(--rod);
+  text-decoration: none;
+}
+
+#kontakt address a:hover {
+  text-decoration: underline;
+}
+
+/* Öppettider */
+#oppettider {
+  margin-bottom: 2rem;
+}
+
+#oppettider h3 {
+  margin-bottom: 0.7rem;
+}
+
+#oppettider table {
+  border-collapse: collapse;
+}
+
+#oppettider td {
+  padding: 0.3rem 1.5rem 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+/* Leveranslänkar */
+#leverans h3 {
+  margin-bottom: 0.7rem;
+}
+
+#leverans a {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--rod);
+  color: var(--rod);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+#leverans a:hover {
+  background: var(--rod);
+  color: #fff;
+}
+
+
+/* =============================================
+   FOOTER
+   ============================================= */
+
+footer {
+  text-align: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--gra);
+  border-top: 2px solid var(--rod);
+}
+
+
+/* =============================================
+   MOBILANPASSNING – gäller skärmar under 600px
+   ============================================= */
+
+@media (max-width: 600px) {
+
+  #hero h1 {
+    font-size: 2rem;    /* mindre rubrik på mobil */
+  }
+
+  .namn {
+    min-width: 120px;   /* smalare namnkolumn på mobil */
+  }
+
+  nav ul {
+    gap: 0.8rem;
+  }
+}
