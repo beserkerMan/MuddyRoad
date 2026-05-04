@@ -3,11 +3,11 @@
    ============================================= */
 
 :root {
-  --rod:      #8B1A1A;   /* huvudfärg: röd */
-  --guld:     #C9922A;   /* accentfärg: guld */
-  --ljus:     #F5EDD8;   /* ljus bakgrund */
-  --mork:     #1C1C1C;   /* mörk text */
-  --gra:      #666;      /* grå hjälptext */
+  --rod:      #1a208b;      /* huvudfärg: röd */
+  --guld:     #ff9900;      /* accentfärg: guld */
+  --ljus:     #ebf5d8;      /* ljus bakgrund */
+  --mork:     #1C1C1C;      /* mörk text */
+  --gra:      #c08d1f;      /* grå hjälptext */
 }
 
 
