@@ -3,11 +3,11 @@
    ============================================= */
 
 :root {
-  --rod:      #1a208b;      /* huvudfärg: röd */
-  --guld:     #ff9900;      /* accentfärg: guld */
-  --ljus:     #ebf5d8;      /* ljus bakgrund */
-  --mork:     #1C1C1C;      /* mörk text */
-  --gra:      #c08d1f;      /* grå hjälptext */
+  --rod:      #B83228;      /* varm tomato-röd */
+  --guld:     #D4940A;      /* varm ravgul accent */
+  --ljus:     #FFF8F2;      /* varm krämvit bakgrund */
+  --mork:     #2C1810;      /* varm nästan-svart */
+  --gra:      #7A6050;      /* varm gråbrun hjälptext */
 }
 
 
@@ -22,18 +22,17 @@
 }
 
 body {
-  font-family: Georgia, serif;  /* byt font här */
+  font-family: Georgia, serif;
   font-size: 16px;
   line-height: 1.6;
   color: var(--mork);
-  background: #fff;
+  background: var(--ljus);
 }
 
-/* Begränsar innehållets bredd och centrerar det */
 nav,
 section,
 footer {
-  max-width: 800px;       /* ändra bredd här */
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -61,7 +60,7 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;        /* avstånd mellan länkarna */
+  gap: 1.5rem;
 }
 
 nav a {
@@ -71,20 +70,26 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--rod);  /* hoverfärg */
+  color: var(--rod);
 }
 
 
 /* =============================================
-   HERO – stor välkomstsektion
+   HERO – halvtransparent overlay över bilden
    ============================================= */
 
-
 #hero {
-  background-image: url("media/2910bb796a6e000496a070340a3dd490.jpeg");
-  background-size: cover;        /* makes it fill the whole area */
-  background-position: center;   /* keeps it centered */
-  background-repeat: no-repeat;  /* prevents tiling */
+  /* Lager 1: mörkt halvtransparent lager (justera rgba-alpha för mer/mindre transparency)
+     Lager 2: din bakgrundsbild */
+  background-image:
+    linear-gradient(
+      rgba(30, 10, 5, 0.52),
+      rgba(30, 10, 5, 0.62)
+    ),
+    url("media/2910bb796a6e000496a070340a3dd490.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   text-align: center;
   padding-top: 4rem;
@@ -93,14 +98,15 @@ nav a:hover {
 }
 
 #hero h1 {
-  font-size: 2.8rem;        /* rubrikstorlek */
-  color: var(--rod);
+  font-size: 2.8rem;
+  color: #fff;              /* vit mot den mörka overlayen */
   margin-bottom: 0.5rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
 #hero p {
   font-size: 1.1rem;
-  color: var(--gra);
+  color: #F5DDCC;           /* varm ljusnyanns */
   margin-bottom: 2rem;
 }
 
@@ -110,14 +116,17 @@ nav a:hover {
   margin: 0.3rem;
   padding: 0.75rem 2rem;
   text-decoration: none;
-  border: 2px solid var(--rod);
-  color: var(--rod);
+  border: 2px solid #fff;
+  color: #fff;
   font-size: 0.95rem;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(2px);
+  transition: background 0.2s, color 0.2s;
 }
 
 #hero a:hover {
-  background: var(--rod);
-  color: #fff;
+  background: #fff;
+  color: var(--rod);
 }
 
 
@@ -128,7 +137,7 @@ nav a:hover {
 section {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  border-bottom: 1px solid #ddd;  /* skiljelinje mellan sektioner */
+  border-bottom: 1px solid #E8D5C8;
 }
 
 section h2 {
@@ -147,7 +156,6 @@ section p {
    MENY
    ============================================= */
 
-/* Varje grupp av pizzor */
 .meny-grupp {
   margin-bottom: 2.5rem;
 }
@@ -160,7 +168,6 @@ section p {
   margin-bottom: 0.4rem;
 }
 
-/* Liten notis under grupprubrik */
 .not {
   font-size: 0.82rem;
   color: var(--gra);
@@ -168,35 +175,32 @@ section p {
   font-style: italic;
 }
 
-/* Ta bort standardpunkterna i listan */
 .meny-grupp ul {
   list-style: none;
 }
 
-/* Varje pizzarad */
 .meny-grupp li {
   display: flex;
   gap: 0.6rem;
   padding: 0.45rem 0;
-  border-bottom: 1px dotted #e0e0e0;  /* streckad linje mellan rätter */
+  border-bottom: 1px dotted #DCC9BC;
   font-size: 0.95rem;
 }
 
-/* Pizzanumret (t.ex. "1", "12") */
 .nr {
-  color: var(--gra);
-  min-width: 1.8rem;    /* gör att namnen hamnar i linje */
+  color: var(--guld);
+  min-width: 1.8rem;
   flex-shrink: 0;
+  font-style: italic;
 }
 
-/* Pizzanamnet */
 .namn {
   font-weight: bold;
-  min-width: 160px;     /* ändra om namn är längre/kortare */
+  min-width: 160px;
   flex-shrink: 0;
+  color: var(--mork);
 }
 
-/* Ingredienserna */
 .ing {
   color: var(--gra);
   font-size: 0.88rem;
@@ -208,7 +212,7 @@ section p {
    ============================================= */
 
 #kontakt address {
-  font-style: normal;     /* tar bort kursiv stil från address-taggen */
+  font-style: normal;
   margin-bottom: 2rem;
   line-height: 1.8;
 }
@@ -222,13 +226,13 @@ section p {
   text-decoration: underline;
 }
 
-/* Öppettider */
 #oppettider {
   margin-bottom: 2rem;
 }
 
 #oppettider h3 {
   margin-bottom: 0.7rem;
+  color: var(--mork);
 }
 
 #oppettider table {
@@ -240,9 +244,9 @@ section p {
   font-size: 0.95rem;
 }
 
-/* Leveranslänkar */
 #leverans h3 {
   margin-bottom: 0.7rem;
+  color: var(--mork);
 }
 
 #leverans a {
@@ -253,6 +257,7 @@ section p {
   color: var(--rod);
   text-decoration: none;
   font-size: 0.9rem;
+  transition: background 0.2s, color 0.2s;
 }
 
 #leverans a:hover {
@@ -272,21 +277,22 @@ footer {
   font-size: 0.85rem;
   color: var(--gra);
   border-top: 2px solid var(--rod);
+  background: var(--ljus);
 }
 
 
 /* =============================================
-   MOBILANPASSNING – gäller skärmar under 600px
+   MOBILANPASSNING
    ============================================= */
 
 @media (max-width: 600px) {
 
   #hero h1 {
-    font-size: 2rem;    /* mindre rubrik på mobil */
+    font-size: 2rem;
   }
 
   .namn {
-    min-width: 120px;   /* smalare namnkolumn på mobil */
+    min-width: 120px;
   }
 
   nav ul {
