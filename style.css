@@ -340,7 +340,7 @@ footer {
   min-height: 70vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("media/meny.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("media/back.png") center/cover no-repeat;
   padding: 4rem 1.5rem;
   color: #fff;
 }
