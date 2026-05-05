@@ -1,13 +1,16 @@
 /* =============================================
-   FÄRGER – ändra här för att byta tema
+   FÄRGER – matchar albrektspizza.se
+   Mörkt tema  +  gul/guld varumärkesfärg
    ============================================= */
 
 :root {
-  --rod:      #B83228;      /* varm tomato-röd */
-  --guld:     #D4940A;      /* varm ravgul accent */
-  --ljus:     #FFF8F2;      /* varm krämvit bakgrund */
-  --mork:     #2C1810;      /* varm nästan-svart */
-  --gra:      #7A6050;      /* varm gråbrun hjälptext */
+  --rod:      #F5C518;      /* gul – deras varumärkesfärg ("Logo_Gul") */
+  --guld:     #C89A10;      /* mörkare guld för accenter & hover */
+  --ljus:     #1A1A1A;      /* mörk bakgrund */
+  --mork:     #F0F0F0;      /* ljus text mot mörk bakgrund */
+  --gra:      #AAAAAA;      /* dämpad grå hjälptext */
+  --yta:      #242424;      /* något ljusare yta */
+  --kant:     #333333;      /* diskreta kantlinjer */
 }
 
 
@@ -49,12 +52,14 @@ nav {
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
   border-bottom: 2px solid var(--rod);
+  background: var(--ljus);
 }
 
 .logo {
   font-size: 1.3rem;
   font-weight: bold;
   color: var(--rod);
+  letter-spacing: 0.02em;
 }
 
 nav ul {
@@ -75,16 +80,14 @@ nav a:hover {
 
 
 /* =============================================
-   HERO – halvtransparent overlay över bilden
+   HERO
    ============================================= */
 
 #hero {
-  /* Lager 1: mörkt halvtransparent lager (justera rgba-alpha för mer/mindre transparency)
-     Lager 2: din bakgrundsbild */
   background-image:
     linear-gradient(
-      rgba(30, 10, 5, 0.52),
-      rgba(30, 10, 5, 0.62)
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.70)
     ),
     url("media/2910bb796a6e000496a070340a3dd490.jpeg");
   background-size: cover;
@@ -99,45 +102,44 @@ nav a:hover {
 
 #hero h1 {
   font-size: 2.8rem;
-  color: #fff;              /* vit mot den mörka overlayen */
+  color: var(--rod);
   margin-bottom: 0.5rem;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 #hero p {
   font-size: 1.1rem;
-  color: #F5DDCC;           /* varm ljusnyanns */
+  color: #DDDDDD;
   margin-bottom: 2rem;
 }
 
-/* Knappar i hero */
 #hero a {
   display: inline-block;
   margin: 0.3rem;
   padding: 0.75rem 2rem;
   text-decoration: none;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid var(--rod);
+  color: var(--rod);
   font-size: 0.95rem;
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(2px);
+  background: rgba(245, 197, 24, 0.10);
   transition: background 0.2s, color 0.2s;
 }
 
 #hero a:hover {
-  background: #fff;
-  color: var(--rod);
+  background: var(--rod);
+  color: #111;
 }
 
 
 /* =============================================
-   SEKTIONER – gemensamma inställningar
+   SEKTIONER
    ============================================= */
 
 section {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  border-bottom: 1px solid #E8D5C8;
+  border-bottom: 1px solid var(--kant);
+  background: var(--ljus);
 }
 
 section h2 {
@@ -183,15 +185,16 @@ section p {
   display: flex;
   gap: 0.6rem;
   padding: 0.45rem 0;
-  border-bottom: 1px dotted #DCC9BC;
+  border-bottom: 1px dotted var(--kant);
   font-size: 0.95rem;
 }
 
 .nr {
-  color: var(--guld);
+  color: var(--rod);
   min-width: 1.8rem;
   flex-shrink: 0;
   font-style: italic;
+  opacity: 0.7;
 }
 
 .namn {
@@ -242,6 +245,7 @@ section p {
 #oppettider td {
   padding: 0.3rem 1.5rem 0.3rem 0;
   font-size: 0.95rem;
+  color: var(--mork);
 }
 
 #leverans h3 {
@@ -262,7 +266,7 @@ section p {
 
 #leverans a:hover {
   background: var(--rod);
-  color: #fff;
+  color: #111;
 }
 
 
@@ -277,7 +281,7 @@ footer {
   font-size: 0.85rem;
   color: var(--gra);
   border-top: 2px solid var(--rod);
-  background: var(--ljus);
+  background: #111;
 }
 
 
