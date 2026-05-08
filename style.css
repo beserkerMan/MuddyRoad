@@ -57,6 +57,10 @@ nav {
   color: var(--rod);
 }
 
+.selected {
+  color: #285ab8;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -186,6 +190,7 @@ section p {
   border-bottom: 1px dotted #DCC9BC;
   font-size: 0.95rem;
 }
+
 
 .nr {
   color: var(--guld);
@@ -340,7 +345,7 @@ footer {
   min-height: 70vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("media/back.png") center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("media/meny.jpg") center/cover no-repeat;
   padding: 4rem 1.5rem;
   color: #fff;
 }
@@ -349,7 +354,7 @@ footer {
   max-width: 700px;
 }
 
-.meny-hero .eyebrow {
+.snyggare-text1 {
   display: inline-block;
   font-size: 0.8rem;
   letter-spacing: 0.15em;
