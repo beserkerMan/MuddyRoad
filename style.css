@@ -95,7 +95,9 @@ nav a:hover {
   background-position: center;
   background-repeat: no-repeat;
 
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 4rem;
   padding-bottom: 20rem;
   max-width: 100%;
@@ -112,6 +114,7 @@ nav a:hover {
   font-size: 1.1rem;
   color: #F5DDCC;           /* varm ljusnyanns */
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 /* Knappar i hero */
