@@ -6,8 +6,8 @@
 
 $(function () {
 
-  var $nav  = $('nav');
-  var $hero = $('#hero, .om-hero, .meny-hero').first();
+  var $navBar = $('.nav-bar');
+  var $hero   = $('#hero, .om-hero, .meny-hero').first();
 
   function updateNav() {
     var heroBottom = $hero.length
@@ -15,9 +15,9 @@ $(function () {
       : 80;
 
     if ($(window).scrollTop() > heroBottom) {
-      $nav.addClass('nav-scrolled');
+      $navBar.addClass('nav-scrolled');
     } else {
-      $nav.removeClass('nav-scrolled');
+      $navBar.removeClass('nav-scrolled');
     }
   }
 
