@@ -57,6 +57,10 @@ nav {
   color: var(--rod);
 }
 
+.selected {
+  color: #285ab8;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -186,6 +190,7 @@ section p {
   border-bottom: 1px dotted #DCC9BC;
   font-size: 0.95rem;
 }
+
 
 .nr {
   color: var(--guld);
@@ -340,7 +345,7 @@ footer {
   min-height: 70vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("media/meny.png") center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("media/meny.jpg") center/cover no-repeat;
   padding: 4rem 1.5rem;
   color: #fff;
 }
@@ -349,7 +354,7 @@ footer {
   max-width: 700px;
 }
 
-.meny-hero .eyebrow {
+.snyggare-text1 {
   display: inline-block;
   font-size: 0.8rem;
   letter-spacing: 0.15em;
@@ -490,4 +495,34 @@ footer {
   .info-rad strong {
     text-align: left;
   }
+}
+
+
+/* =============================================
+   HERO SLIDESHOW
+   ============================================= */
+
+/* Each individual slide – absolutely fills the hero */
+.hero-slide {
+  position: absolute;
+  inset: 0;                        /* top/right/bottom/left: 0 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Dark gradient overlay between slides and text */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;            /* clicks pass through to content */
+}
+
+/* Lifts the hero's original text/buttons above slides and overlay */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
 }
