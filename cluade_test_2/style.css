@@ -77,6 +77,21 @@ nav a:hover {
   color: var(--rod);
 }
 
+/* Sticky nav – added by jQuery when scrolled past hero */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--ljus);
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+nav.nav-scrolled {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  background: rgba(255, 248, 242, 0.96);
+  backdrop-filter: blur(6px);
+}
+
 
 /* =============================================
    HERO – halvtransparent overlay över bilden
@@ -505,10 +520,7 @@ footer {
 /* Each individual slide – absolutely fills the hero */
 .hero-slide {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  /* left is animated by jQuery – DO NOT set left here */
+  inset: 0;                        /* top/right/bottom/left: 0 */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -518,10 +530,7 @@ footer {
 /* Dark gradient overlay between slides and text */
 .hero-overlay {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   z-index: 1;
   pointer-events: none;            /* clicks pass through to content */
 }
