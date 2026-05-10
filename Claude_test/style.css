@@ -505,7 +505,10 @@ footer {
 /* Each individual slide – absolutely fills the hero */
 .hero-slide {
   position: absolute;
-  inset: 0;                        /* top/right/bottom/left: 0 */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* left is animated by jQuery – DO NOT set left here */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -515,7 +518,10 @@ footer {
 /* Dark gradient overlay between slides and text */
 .hero-overlay {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 1;
   pointer-events: none;            /* clicks pass through to content */
 }

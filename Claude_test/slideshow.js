@@ -34,7 +34,7 @@ $(function () {
 
     /* ── Build slide elements ── */
     var slides = [];
-    $(images).each(function (i, src) {
+    $.each(images, function (i, src) {
       var $slide = $('<div class="hero-slide">').css({
         backgroundImage : 'url(' + src + ')',
         left            : i === 0 ? '0%' : '100%'   // first visible, rest off-right
