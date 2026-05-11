@@ -1,34 +1,36 @@
-const images = [
+/**
+ * Hero image fade slider – Albrekts Pizzeria
+ * Fades between background images on #hero every 5 seconds.
+ * Requires jQuery.
+ */
+
+$(function () {
+  var images = [
     "media/chahah.jpeg",
     "media/duddu.jpg",
     "media/uewd.jpg",
-];
+  ];
 
-const overlay = "linear-gradient(rgba(30, 10, 5, 0.52), rgba(30, 10, 5, 0.62))";
+  var overlay = "linear-gradient(rgba(30, 10, 5, 0.52), rgba(30, 10, 5, 0.62))";
+  var current = 0;
+  var $hero   = $('#hero');
 
-let current = 0;
-const hero = document.getElementById("hero");
+  if (!$hero.length) return; // only runs on pages that have #hero
 
-function setImage(index) {
-  hero.style.backgroundImage = `${overlay}, url("${images[index]}")`;
-}
+  function setImage(index) {
+    $hero.css('backgroundImage', overlay + ', url("' + images[index] + '")');
+  }
 
-function nextSlide() {
-  current = (current + 1) % images.length;
+  // Set the first image immediately on load
+  setImage(current);
 
-  hero.style.opacity = "0.1";
+  // Rotate every 5 seconds using jQuery .animate() for the fade
+  setInterval(function () {
+    current = (current + 1) % images.length;
 
-  setTimeout(() => {
-    setImage(current);
-    hero.style.opacity = "1";
-  }, 500);
-}
-
-// Set first image on load
-setImage(current);
-
-// Add fade transition to hero
-hero.style.transition = "opacity 0.4s ease";
-
-// Rotate every 4 seconds
-setInterval(nextSlide, 5000);
+    $hero.animate({ opacity: 0.1 }, 400, function () {
+      setImage(current);
+      $hero.animate({ opacity: 1 }, 400);
+    });
+  }, 5000);
+});

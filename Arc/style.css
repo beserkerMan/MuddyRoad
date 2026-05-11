@@ -57,6 +57,10 @@ nav {
   color: var(--rod);
 }
 
+.selected {
+  color: #285ab8;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -91,7 +95,9 @@ nav a:hover {
   background-position: center;
   background-repeat: no-repeat;
 
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 4rem;
   padding-bottom: 20rem;
   max-width: 100%;
@@ -108,6 +114,7 @@ nav a:hover {
   font-size: 1.1rem;
   color: #F5DDCC;           /* varm ljusnyanns */
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 /* Knappar i hero */
@@ -143,7 +150,7 @@ section {
 section h2 {
   font-size: 1.8rem;
   color: var(--rod);
-  margin-bottom: 1rem;
+  margin-bottom: 0.3rem;
 }
 
 section p {
@@ -163,7 +170,7 @@ section p {
 .meny-grupp h3 {
   font-size: 1.1rem;
   color: var(--rod);
-  border-bottom: 1px solid var(--guld);
+  border-bottom: 1px solid black;
   padding-bottom: 0.3rem;
   margin-bottom: 0.4rem;
 }
@@ -187,11 +194,12 @@ section p {
   font-size: 0.95rem;
 }
 
+
 .nr {
   color: var(--guld);
   min-width: 1.8rem;
   flex-shrink: 0;
-  font-style: italic;
+  font-style:oblique;
 }
 
 .namn {
@@ -340,7 +348,7 @@ footer {
   min-height: 70vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("media/meny.png") center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("media/meny.jpg") center/cover no-repeat;
   padding: 4rem 1.5rem;
   color: #fff;
 }
@@ -349,7 +357,7 @@ footer {
   max-width: 700px;
 }
 
-.meny-hero .eyebrow {
+.snyggare-text1 {
   display: inline-block;
   font-size: 0.8rem;
   letter-spacing: 0.15em;

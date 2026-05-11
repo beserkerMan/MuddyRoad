@@ -77,6 +77,22 @@ nav a:hover {
   color: var(--rod);
 }
 
+/* ── Full-width sticky wrapper ── */
+.nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--ljus);
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Triggered by jQuery – shadow + frosted tint when scrolled past hero */
+.nav-bar.nav-scrolled {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  background: rgba(255, 248, 242, 0.96);
+  backdrop-filter: blur(6px);
+}
+
 
 /* =============================================
    HERO – halvtransparent overlay över bilden
