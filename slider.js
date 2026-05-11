@@ -7,8 +7,8 @@
 $(function () {
   var images = [
     "media/chahah.jpeg",
-    "media/duddu.jpg",
-    "media/uewd.jpg",
+    "media/tttt.jpg",
+    "media/wewe.jpg",
   ];
 
   var overlay = "linear-gradient(rgba(30, 10, 5, 0.52), rgba(30, 10, 5, 0.62))";
