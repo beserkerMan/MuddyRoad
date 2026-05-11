@@ -32,5 +32,5 @@ $(function () {
       setImage(current);
       $hero.animate({ opacity: 1 }, 400);
     });
-  }, 5000);
+  }, 3500);
 });
