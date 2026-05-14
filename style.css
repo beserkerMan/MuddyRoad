@@ -75,7 +75,6 @@ nav a {
   font-size: 0.95rem;
 }
 
-
 /*så att den blir blå när man hoverar över*/
 nav a:hover {
   color: var(--blå);
@@ -91,6 +90,11 @@ nav a:hover {
 }
 
 
+.nav-bar.nav-scrolled {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  background: rgba(255, 248, 242, 0.96);
+  backdrop-filter: blur(6px);
+}
 .nav-bar.nav-scrolled {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
   background: rgba(255, 248, 242, 0.96);
