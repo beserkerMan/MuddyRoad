@@ -3,39 +3,48 @@
    ============================================= */
 
 :root {
-  --blå:      #285ab8;      /* mellanbla accent */
-  --guld:     #D4940A;      /* varm ravgul accent */
-  --ljus:     #FFF8F2;      /* varm krämvit bakgrund */
-  --mörk:     #2C1810;      /* varm nästan-svart */
-  --grå:      #7A6050;      /* varm gråbrun hjälptext */
+  --blå:      #285ab8;       
+  --guld:     #D4940A;       
+  --ljus:     #FFF8F2;      
+  --mörk:     #2C1810;       
+  --grå:      #7A6050;      
 } 
+
 /* =============================================
    GRUNDINSTÄLLNINGAR
    ============================================= */
 
+
+   /* Påverkar allt, jag gillar att ingeting har en margin från början. */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* allt i body i dokumentet kommer att ha fonten Georgia Serif. */
 body {
   font-family: Georgia, serif;
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 1rem; /* 1 rem = 16px*/
+  line-height: 1.6; /* Höjden för linjerna, mer läsbart för mig */
   color: var(--mörk);
   background: var(--ljus);
 }
 
-nav,
-section,
-footer {
+/*Stylar både nav, section och footer.*/
+nav,section,footer {
   max-width: 800px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
-
+/* Space between hjälper med att lägga albreksvägen till vänster och allt annat till höger*/
 nav {
   display: flex;
   justify-content: space-between;
@@ -66,11 +75,13 @@ nav a {
   font-size: 0.95rem;
 }
 
+
+/*så att den blir blå när man hoverar över*/
 nav a:hover {
   color: var(--blå);
 }
 
-
+/* Der här hjälper med att se till att vår nav bar inte försvinner när man scrollar neråt.*/
 .nav-bar {
   position: sticky;
   top: 0;
