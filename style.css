@@ -1,3 +1,4 @@
+/* css-variabler för våra egna färger */
 :root {
   --blå:      #285ab8;       
   --guld:     #D4940A;       
@@ -73,7 +74,10 @@ nav a:hover {
   color: var(--blå);
 }
 
-/* Der här hjälper med att se till att vår nav bar inte försvinner när man scrollar neråt.*/
+/* Der här hjälper med att se till att vår nav bar inte försvinner när man scrollar neråt.
+Dessutom gör navbaren sticky när man scrollar
+*/
+
 .nav-bar {
   position: sticky;
   top: 0;
@@ -88,7 +92,7 @@ nav a:hover {
   backdrop-filter: blur(6px);
 }
 
-
+/* ett mörkt lager över bilden så att texten syns bättre */
 #hero {
   background-image:
     linear-gradient(
@@ -211,18 +215,21 @@ section p {
 }
 
 
-
+/* stylar adressen i kontakt delen */
 #kontakt address {
   font-style: normal;
   margin-bottom: 2rem;
   line-height: 1.8;
 }
 
+/*stylar länkarna (anchor) i address */
+
 #kontakt address a {
   color: var(--blå);
   text-decoration: none;
 }
 
+/* När du hover över addressen då blir det en underline över länken */
 #kontakt address a:hover {
   text-decoration: underline;
 }
@@ -277,7 +284,7 @@ footer {
   background: var(--ljus);
 }
 
-
+/* Gör sidan bättre på mindre skärmar */
 @media (max-width: 600px) {
 
   #hero h1 {
@@ -370,7 +377,7 @@ footer {
   margin: 0 auto;
   padding: 4rem 1.5rem;
 }
-
+/* Gör så texten och faktarutan ligger bredvid varandra */
 .om-info {
   display: grid;
   grid-template-columns: 1.6fr 1fr;
@@ -423,6 +430,7 @@ footer {
   text-align: right;
 }
 
+/* Lägger innehållet i mitten av rutan */
 .om-bild .bild-ruta {
   min-height: 320px;
   border: 1px solid #e8d5c8;
