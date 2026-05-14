@@ -10,18 +10,22 @@
       href="https://albrektspizza.se/wp-content/uploads/2025/03/cropped-Albrekts_Logo_Gul-192x192.png"
       sizes="192x192"
     />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="sticky-nav.js"></script>
   </head>
 
   <body>
     <!-- NAV -->
-    <nav>
-      <div><a class="logo" href="index.html">Albrekts Pizzeria</a></div>
-      <ul>
-        <li><a href="omoss.html">Om oss</a></li>
-        <li><a class="selected" href="meny.html">Meny</a></li>
-        <li><a href="index.html#kontakt">Kontakt</a></li>
-      </ul>
-    </nav>
+    <div class="nav-bar">
+      <nav>
+        <div><a class="logo" href="index.html">Albrekts Pizzeria</a></div>
+        <ul>
+          <li><a href="omoss.html">Om oss</a></li>
+          <li><a class="selected" href="meny.html">Meny</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
 
     <!-- HERO -->
     <header class="meny-hero">
@@ -37,9 +41,7 @@
     <!-- PIZZA -->
     <section>
       <h2>Pizza</h2>
-      <p class="not">
-        Tomatsås och ost ingår på alla pizzor. 2 för 1 erbjudande på hela menyn.
-      </p>
+      <p class="not">2 för 1 erbjudande på hela menyn.</p>
 
       <div class="meny-grupp">
         <h3>Grupp 1 – 165 kr</h3>
@@ -70,31 +72,6 @@
           <li>
             <span class="namn">Salami</span
             ><span class="ing">Salami och lök</span
-            ><span class="nr">165 kr</span>
-          </li>
-          <li>
-            <span class="namn">Margherita</span
-            ><span class="ing">Tomatsås och ost</span
-            ><span class="nr">165 kr</span>
-          </li>
-          <li>
-            <span class="namn">Tonno</span
-            ><span class="ing">Tonfisk och lök</span
-            ><span class="nr">165 kr</span>
-          </li>
-          <li>
-            <span class="namn">Bussola</span
-            ><span class="ing">Skinka och räkor</span
-            ><span class="nr">165 kr</span>
-          </li>
-          <li>
-            <span class="namn">Hawaii</span
-            ><span class="ing">Skinka och ananas</span
-            ><span class="nr">165 kr</span>
-          </li>
-          <li>
-            <span class="namn">Capricciosa</span
-            ><span class="ing">Skinka och champinjoner</span
             ><span class="nr">165 kr</span>
           </li>
         </ul>
@@ -139,17 +116,6 @@
             ><span class="ing">Skinka, räkor och champinjoner</span
             ><span class="nr">175 kr</span>
           </li>
-          <li>
-            <span class="namn">Quattro Stagioni</span
-            ><span class="ing"
-              >Skinka, räkor, champinjoner, musslor och oliver</span
-            ><span class="nr">175 kr</span>
-          </li>
-          <li>
-            <span class="namn">Mafia</span
-            ><span class="ing">Skinka, ananas, banan och curry</span
-            ><span class="nr">175 kr</span>
-          </li>
         </ul>
       </div>
 
@@ -183,23 +149,6 @@
               >Köttfärs, champinjoner, paprika, lök och cayennepeppar</span
             ><span class="nr">185 kr</span>
           </li>
-          <li>
-            <span class="namn">Husets Special</span
-            ><span class="ing">Oxkött, champinjoner och bearnaisesås</span
-            ><span class="nr">185 kr</span>
-          </li>
-          <li>
-            <span class="namn">Kockens Special</span
-            ><span class="ing"
-              >Oxkött, räkor, champinjoner och gorgonzolaost</span
-            ><span class="nr">185 kr</span>
-          </li>
-          <li>
-            <span class="namn">Albrektsvägen</span
-            ><span class="ing"
-              >Oxkött, räkor, champinjoner, tomater och bearnaisesås</span
-            ><span class="nr">185 kr</span>
-          </li>
         </ul>
       </div>
 
@@ -210,25 +159,6 @@
             <span class="namn">Noel</span
             ><span class="ing"
               >Oxkött, fläskfilé, kebabkött, champinjoner, lök och
-              bearnaisesås</span
-            ><span class="nr">195 kr</span>
-          </li>
-          <li>
-            <span class="namn">Gabbe</span
-            ><span class="ing">Fläskfilé, gyroskött, salami och vitlökssås</span
-            ><span class="nr">195 kr</span>
-          </li>
-          <li>
-            <span class="namn">Mix Special</span
-            ><span class="ing"
-              >Kebabkött, gyroskött, lök, feferoni, isbergssallad, rödsås,
-              vitsås, gurka och tomat</span
-            ><span class="nr">195 kr</span>
-          </li>
-          <li>
-            <span class="namn">Gabriella</span
-            ><span class="ing"
-              >Skinka, räkor, oxkött, fläskfilé, champinjoner och
               bearnaisesås</span
             ><span class="nr">195 kr</span>
           </li>
@@ -264,29 +194,6 @@
               >Lök, köttfärs, tacokrydda, jalapeño och tacosås</span
             ><span class="nr">195 kr</span>
           </li>
-          <li>
-            <span class="namn">Marcelos Special</span
-            ><span class="ing"
-              >Skinka, champinjoner, lök, tomat, oliver och vitost</span
-            ><span class="nr">195 kr</span>
-          </li>
-          <li>
-            <span class="namn">Provancale</span
-            ><span class="ing"
-              >Oxfilé, champinjoner, färsk vitlök och bearnaisesås</span
-            ><span class="nr">195 kr</span>
-          </li>
-          <li>
-            <span class="namn">Bionde</span
-            ><span class="ing"
-              >Fläskfilé, banan, ananas, curry och bearnaisesås</span
-            ><span class="nr">195 kr</span>
-          </li>
-          <li>
-            <span class="namn">Calzone Special</span
-            ><span class="ing">Skinka, champinjoner och räkor (inbakad)</span
-            ><span class="nr">195 kr</span>
-          </li>
         </ul>
       </div>
     </section>
@@ -294,10 +201,7 @@
     <!-- KEBAB -->
     <section>
       <h2>Kebab</h2>
-      <p class="not">
-        2 för 1 erbjudande. Serveras med isbergssallad, lök, tomat, gurka,
-        peperoni och valfri sås.
-      </p>
+      <p class="not">2 för 1 erbjudande.</p>
 
       <div class="meny-grupp">
         <h3>Rulle – 165 kr</h3>
@@ -327,7 +231,6 @@
 
       <div class="meny-grupp">
         <h3>Tallrik – 165 kr</h3>
-        <p class="not">Välj mellan pommes frites och ris.</p>
         <ul>
           <li>
             <span class="namn">Kebabtallrik</span
@@ -366,11 +269,6 @@
             ><span class="ing">Kyckling i pitabröd</span
             ><span class="nr">115 kr</span>
           </li>
-          <li>
-            <span class="namn">Falafel med pitabröd</span
-            ><span class="ing">Falafel i pitabröd</span
-            ><span class="nr">115 kr</span>
-          </li>
         </ul>
       </div>
     </section>
@@ -378,9 +276,6 @@
     <!-- GRILL -->
     <section>
       <h2>Grill</h2>
-      <p class="not">
-        2 för 1 erbjudande. Serveras med tillbehör enligt beskrivning.
-      </p>
 
       <div class="meny-grupp">
         <h3>Från grillen – 165 kr</h3>
@@ -406,30 +301,26 @@
               vitlökskräm</span
             ><span class="nr">165 kr</span>
           </li>
-          <li>
-            <span class="namn">Chicken Nuggets</span
-            ><span class="ing"
-              >8 st kycklingnuggets, sallad, pommes frites och mild sås</span
-            ><span class="nr">165 kr</span>
-          </li>
-          <li>
-            <span class="namn">Grillbiff</span
-            ><span class="ing"
-              >Pommes frites, persiljesmör, bearnaisesås och sallad</span
-            ><span class="nr">165 kr</span>
-          </li>
-          <li>
-            <span class="namn">Rödspätta</span
-            ><span class="ing">Pommes frites, remouladsås och sallad</span
-            ><span class="nr">165 kr</span>
-          </li>
         </ul>
+      </div>
+
+      <div id="leverans">
+        <h3>Beställ online</h3>
+        <a
+          href="https://wolt.com/en/swe/norrkoping/restaurant/albrekts-pizzeria"
+          >Wolt</a
+        >
+        <a href="https://www.foodora.se/restaurant/vm3z/albrekts-pizzeria"
+          >Foodora</a
+        >
       </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-      <p>© Albrekts Pizzeria – Norrköping</p>
+      <p>Albrekts Pizzeria – Norrköping</p>
+      <p>Albrektsvägen 113, 603 53 Norrköping</p>
+      <p>Ring oss på 01-116 68 60</p>
     </footer>
   </body>
 </html>
