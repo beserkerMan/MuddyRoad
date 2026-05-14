@@ -1,7 +1,3 @@
-/* =============================================
-   FÄRGER – ändra här för att byta tema
-   ============================================= */
-
 :root {
   --blå:      #285ab8;       
   --guld:     #D4940A;       
@@ -10,9 +6,6 @@
   --grå:      #7A6050;      
 } 
 
-/* =============================================
-   GRUNDINSTÄLLNINGAR
-   ============================================= */
 
 
    /* Påverkar allt, jag gillar att ingeting har en margin från början. */
@@ -89,18 +82,11 @@ nav a:hover {
   transition: box-shadow 0.3s ease, background 0.3s ease;
 }
 
-
 .nav-bar.nav-scrolled {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
   background: rgba(255, 248, 242, 0.96);
   backdrop-filter: blur(6px);
 }
-.nav-bar.nav-scrolled {
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
-  background: rgba(255, 248, 242, 0.96);
-  backdrop-filter: blur(6px);
-}
-
 
 
 #hero {
