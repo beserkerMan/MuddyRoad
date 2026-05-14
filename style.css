@@ -171,7 +171,7 @@ section p {
   margin-bottom: 0.4rem;
 }
 
-.not {
+.erbjudande {
   font-size: 0.82rem;
   color: var(--grå);
   margin-bottom: 0.8rem;
@@ -190,21 +190,21 @@ section p {
 }
 
 
-.nr {
+.pris {
   color: var(--guld);
   min-width: 1.8rem;
   flex-shrink: 0;
   font-style:oblique;
 }
 
-.namn {
+.produkt {
   font-weight: bold;
   min-width: 160px;
   flex-shrink: 0;
   color: var(--mörk);
 }
 
-.ing {
+.ingrediense {
   color: var(--grå);
   font-size: 0.88rem;
 }
@@ -283,7 +283,7 @@ footer {
     font-size: 2rem;
   }
 
-  .namn {
+  .produkt {
     min-width: 120px;
   }
 
@@ -378,7 +378,7 @@ footer {
 }
 
 .om-text h2,
-.om-cta h2 {
+.om-redo h2 {
   margin-bottom: 1rem;
   color: var(--blå);
 }
@@ -434,12 +434,12 @@ footer {
   padding: 1.5rem;
 }
 
-.om-cta {
+.om-redo {
   text-align: center;
   border-top: 1px solid #e8d5c8;
 }
 
-.om-cta p {
+.om-redo p {
   color: var(--grå);
   margin-bottom: 1.5rem;
 }
