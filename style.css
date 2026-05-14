@@ -3,14 +3,12 @@
    ============================================= */
 
 :root {
-  --rod:      #285ab8;      /* varm tomato-röd */
+  --blå:      #285ab8;      /* mellanbla accent */
   --guld:     #D4940A;      /* varm ravgul accent */
   --ljus:     #FFF8F2;      /* varm krämvit bakgrund */
-  --mork:     #2C1810;      /* varm nästan-svart */
-  --gra:      #7A6050;      /* varm gråbrun hjälptext */
-}
-
-
+  --mörk:     #2C1810;      /* varm nästan-svart */
+  --grå:      #7A6050;      /* varm gråbrun hjälptext */
+} 
 /* =============================================
    GRUNDINSTÄLLNINGAR
    ============================================= */
@@ -25,7 +23,7 @@ body {
   font-family: Georgia, serif;
   font-size: 16px;
   line-height: 1.6;
-  color: var(--mork);
+  color: var(--mörk);
   background: var(--ljus);
 }
 
@@ -49,7 +47,7 @@ nav {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--rod);
+  color: var(--blå);
 }
 
 .selected {
@@ -64,12 +62,12 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: var(--mork);
+  color: var(--mörk);
   font-size: 0.95rem;
 }
 
 nav a:hover {
-  color: var(--rod);
+  color: var(--blå);
 }
 
 
@@ -139,25 +137,24 @@ nav a:hover {
 
 #hero a:hover {
   background: #fff;
-  color: var(--rod);
+  color: var(--blå);
 }
 
 
 
 section {
   padding-top: 3rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid #E8D5C8;
+  padding-bottom: 3rem; 
 }
 
 section h2 {
   font-size: 1.8rem;
-  color: var(--rod);
+  color: var(--blå);
   margin-bottom: 0.3rem;
 }
 
 section p {
-  color: var(--gra);
+  color: var(--grå);
   max-width: 600px;
 }
 
@@ -168,7 +165,7 @@ section p {
 
 .meny-grupp h3 {
   font-size: 1.1rem;
-  color: var(--rod);
+  color: var(--blå);
   border-bottom: 1px solid black;
   padding-bottom: 0.3rem;
   margin-bottom: 0.4rem;
@@ -176,7 +173,7 @@ section p {
 
 .not {
   font-size: 0.82rem;
-  color: var(--gra);
+  color: var(--grå);
   margin-bottom: 0.8rem;
   font-style: italic;
 }
@@ -188,8 +185,7 @@ section p {
 .meny-grupp li {
   display: flex;
   gap: 0.6rem;
-  padding: 0.45rem 0;
-  border-bottom: 1px dotted #DCC9BC;
+  padding: 0.45rem 0; 
   font-size: 0.95rem;
 }
 
@@ -205,11 +201,11 @@ section p {
   font-weight: bold;
   min-width: 160px;
   flex-shrink: 0;
-  color: var(--mork);
+  color: var(--mörk);
 }
 
 .ing {
-  color: var(--gra);
+  color: var(--grå);
   font-size: 0.88rem;
 }
 
@@ -222,7 +218,7 @@ section p {
 }
 
 #kontakt address a {
-  color: var(--rod);
+  color: var(--blå);
   text-decoration: none;
 }
 
@@ -236,7 +232,7 @@ section p {
 
 #oppettider h3 {
   margin-bottom: 0.7rem;
-  color: var(--mork);
+  color: var(--mörk);
 }
 
 #oppettider table {
@@ -250,22 +246,22 @@ section p {
 
 #leverans h3 {
   margin-bottom: 0.7rem;
-  color: var(--mork);
+  color: var(--mörk);
 }
 
 #leverans a {
   display: inline-block;
   margin-right: 1rem;
   padding: 0.5rem 1.2rem;
-  border: 1px solid var(--rod);
-  color: var(--rod);
+  border: 1px solid var(--blå);
+  color: var(--blå);
   text-decoration: none;
   font-size: 0.9rem;
   transition: background 0.2s, color 0.2s;
 }
 
 #leverans a:hover {
-  background: var(--rod);
+  background: var(--blå);
   color: #fff;
 }
 
@@ -275,8 +271,8 @@ footer {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   font-size: 0.85rem;
-  color: var(--gra);
-  border-top: 2px solid var(--rod);
+  color: var(--grå);
+  border-top: 2px solid var(--blå);
   background: var(--ljus);
 }
 
@@ -384,12 +380,12 @@ footer {
 .om-text h2,
 .om-cta h2 {
   margin-bottom: 1rem;
-  color: var(--rod);
+  color: var(--blå);
 }
 
 .om-text p {
   max-width: 65ch;
-  color: var(--gra);
+  color: var(--grå);
   line-height: 1.8;
   margin-bottom: 1rem;
 }
@@ -402,7 +398,7 @@ footer {
 
 .info-box h3 {
   margin-bottom: 1rem;
-  color: var(--rod);
+  color: var(--blå);
 }
 
 .info-rad {
@@ -418,11 +414,11 @@ footer {
 }
 
 .info-rad span {
-  color: var(--gra);
+  color: var(--grå);
 }
 
 .info-rad strong {
-  color: var(--mork);
+  color: var(--mörk);
   text-align: right;
 }
 
@@ -434,7 +430,7 @@ footer {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--gra);
+  color: var(--grå);
   padding: 1.5rem;
 }
 
@@ -444,14 +440,14 @@ footer {
 }
 
 .om-cta p {
-  color: var(--gra);
+  color: var(--grå);
   margin-bottom: 1.5rem;
 }
 
 .knapp-primär {
   display: inline-block;
   padding: 0.85rem 2rem;
-  background: var(--rod);
+  background: var(--blå);
   color: #fff;
   text-decoration: none;
   font-family: Georgia, serif;
